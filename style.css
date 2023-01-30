@@ -48,14 +48,14 @@ li{
     gap: 20px;
 }
 
-.logoreseau{
+.fa-brands{
     color: white;
     font-size: larger;
 }
 
 /* partie principale */
 
-main{
+#principal{
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -111,6 +111,13 @@ form{
 
 /* section 2 */
 
+#n2{
+    display: flex;
+    flex-direction: column;
+    gap: 120px;
+    padding-top: 80px;
+}
+
 #top{
     display: flex;
     flex-direction: column;
@@ -119,7 +126,38 @@ form{
     gap: 20px;
 }
 
-#sousPF{
-    width: 480px;
+#PF{
+    font-size: 36px;
 }
 
+#sousPF{
+    width: 720px;
+    font-size: 24px;
+}
+
+#lescartes{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 80px;
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content:center;
+    padding: 8px;
+    gap: 20px;
+    width: 440px;
+    height: 440px;
+    background: radial-gradient(rgb(139,195,245),#1294b8);
+    border-radius: 16px;
+    color: white;
+}
+
+.fa-solid{
+    color: white;
+    font-size: 60px;
+}
