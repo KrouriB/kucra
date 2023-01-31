@@ -224,5 +224,6 @@ form{
 #n4{
     display: flex;
     flex-direction: column;
-    alig-items: center;
+    align-items: center;
 }
+
