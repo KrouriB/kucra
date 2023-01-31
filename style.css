@@ -9,7 +9,9 @@
     height: 100vh;
 }
 
+
 /* section 1 */
+
 
 #n1{
     background: radial-gradient(rgb(139,195,245),#1294b8);
@@ -39,8 +41,9 @@ ul{
     gap: 24px;
 }
 
-li{
+li > a{
     text-decoration: none;
+    color: white;
 }
 
 #reseau{
@@ -51,6 +54,10 @@ li{
 .fa-brands{
     color: white;
     font-size: larger;
+}
+
+.fa-brands:hover{
+    filter: invert(35%);
 }
 
 /* partie principale */
@@ -105,11 +112,18 @@ form{
     border: 0;
 }
 
+#button:hover{
+    filter: contrast(150%);
+    filter: grayscale(35%);
+}
+
 #imgsect1{
     width: 720px;
 }
 
+
 /* section 2 */
+
 
 #n2{
     display: flex;
@@ -155,6 +169,11 @@ form{
     background: radial-gradient(rgb(139,195,245),#1294b8);
     border-radius: 16px;
     color: white;
+    transition: all 1s;
+}
+
+.card:hover{
+    transform: translateY(-40px);
 }
 
 .fa-solid{
@@ -165,6 +184,10 @@ form{
 .titrecard{
     font-size: 44px;
 }
+
+
+/* 3ème section */
+
 
 .textcard{
     font-size: 20px;
