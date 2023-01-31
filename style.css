@@ -254,7 +254,7 @@ form{
     gap: 120px;
 }
 
-.infodyna > *{
+.infodyna > div > *{
     width: 300px;
     display: flex;
     flex-direction: column;
