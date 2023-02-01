@@ -10,7 +10,15 @@
 }
 
 
-/* section 1 */
+
+
+
+/* ---------- 1er section ---------- */
+
+
+
+
+
 
 
 #n1{
@@ -125,7 +133,15 @@ form{
 }
 
 
-/* section 2 */
+
+
+
+/* ---------- 2ème section ---------- */
+
+
+
+
+
 
 
 #n2{
@@ -190,7 +206,15 @@ form{
 }
 
 
-/* 3ème section */
+
+
+
+/* ---------- 3ème section ---------- */
+
+
+
+
+
 
 
 .textcard{
@@ -218,7 +242,15 @@ form{
 }
 
 
-/* 4ème section */
+
+
+
+
+/* ---------- 4ème section ---------- */
+
+
+
+
 
 
 #n4{
@@ -356,3 +388,32 @@ form{
 
 
 
+/* ---------- semi section ---------- */
+
+
+
+
+
+
+#semisection{
+    background-image: url(img/parallax.png);
+    height: 60vh;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+#textpara{
+    backdrop-filter: brightness(50%) grayscale(20%);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+
+#textpara > *{
+    color: white;
+}
