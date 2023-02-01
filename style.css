@@ -231,7 +231,6 @@ form{
 #n4 > div{
     display: flex;
     flex-direction: column;
-    gap: 50px;
 }
 
 #n4 > h3{
@@ -246,6 +245,10 @@ form{
     text-align: center;
 }
 
+#n4 > div{
+    padding-top: 20px;
+}
+
 .infodyna{
     display: flex;
     flex-direction: row;
@@ -254,35 +257,31 @@ form{
     gap: 120px;
 }
 
-.infodyna > div > *{
+#chiffre{
+    padding-bottom: 20px;
+}
+
+.infodyna > .infochiffre, .infodyna > div > figure{
     width: 240px;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-#perso > div{
-    position: relative;
+.nom_prenom , .role{
+    text-align: center;
 }
 
-.ico{
-    position: absolute;
-    /* overflow: hidden; */
-    z-index: 3;
-    left: -180px;
-    top : -80px;
+.nom_prenom{
+    padding-top: 20px;
 }
 
-#perso>div:hover .ico {
-    left: -40px;
-    top: 0px;
-    gap: 20px;
-}
+/* portrait et icone reseau + position */
 
-.ico > .fa-brands{
-    width: 36px;
-    height: 36px;
-    font-size: 24px;
+#perso > figure > .fa-brands{
+    width: 27px;
+    height: 27px;
+    font-size: 18px;
     color: black;
     left: -120px;
     background-color: white;
@@ -291,19 +290,69 @@ form{
     justify-content: center;
     align-content: center;
     flex-wrap: wrap;
-    transition: all .2s;
 }
-
+.icores{
+    position: absolute;
+    z-index: 3;
+    left: -8px;
+    width: 30px;
+    height: 30px;
+    font-size: 20px;
+    color: black;
+    left: -120px;
+    background-color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+    transition: all .8s;
+}
+.fa-facebook-f{
+    top: -90px;
+}
+.fa-twitter{
+    top: -45px;
+}
+.fa-skype{
+    top: 0px;
+}
+#perso > div > figure{
+    position: relative;
+    width: 240px;
+    border-radius: 50%;
+    overflow: hidden;
+}
 .imgperso{
     width: 240px;
     border-radius: 50%;
     filter: grayscale(100%);
-    transition: 0.2s;
-    margin-bottom: 24px;
+    transition: all .6s;
     z-index: 2;
 }
-.imgperso:hover{
+
+/* annimation hover */
+
+#perso>div:hover .icores{
+    left: 24px;
+    animation: 3s;
+}
+#perso>div:hover .fa-facebook-f{
+    top: 60px;
+}
+#perso>div:hover .fa-twitter{
+    top: 105px;
+}
+#perso>div:hover .fa-skype{
+    top: 150px;
+}
+#perso > div:hover .imgperso{
     transform: scale(1.1);
     filter: none;
+    animation: 2s;
 }
+
+
+
+
 
