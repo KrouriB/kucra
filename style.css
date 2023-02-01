@@ -255,7 +255,7 @@ form{
 }
 
 .infodyna > div > *{
-    width: 300px;
+    width: 240px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -267,39 +267,34 @@ form{
 
 .ico{
     position: absolute;
-    overflow: hidden;
-    height: 314px;
-    z-index: 2;
+    /* overflow: hidden; */
+    z-index: 3;
+    left: -180px;
+    top : -80px;
+}
+
+#perso>div:hover .ico {
+    left: -40px;
+    top: 0px;
+    gap: 20px;
 }
 
 .ico > .fa-brands{
-    position: absolute;
     width: 36px;
     height: 36px;
     font-size: 24px;
     color: black;
-    left: 0px;
+    left: -120px;
     background-color: white;
     border-radius: 50%;
     display: flex;
     justify-content: center;
     align-content: center;
     flex-wrap: wrap;
+    transition: all .2s;
 }
 
-.ico > .fa-facebook-f{
-    top: 50px;
-}
-
-.ico > .fa-twitter{
-    top: 110px;
-}
-
-.ico > .fa-skype{
-    top: 170px;
-}
-
-#perso > div > figure > img{
+.imgperso{
     width: 240px;
     border-radius: 50%;
     filter: grayscale(100%);
@@ -307,8 +302,7 @@ form{
     margin-bottom: 24px;
     z-index: 2;
 }
-
-#perso > div > figure > img:hover{
+.imgperso:hover{
     transform: scale(1.1);
     filter: none;
 }
