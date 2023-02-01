@@ -60,7 +60,7 @@ li > a:hover{
     font-size: larger;
 }
 
-.fa-brands:hover{
+#reseau > a >.fa-brands:hover{
     filter: invert(35%);
 }
 
@@ -261,15 +261,55 @@ form{
     align-items: center;
 }
 
+#perso > div{
+    position: relative;
+}
+
+.ico{
+    position: absolute;
+    overflow: hidden;
+    height: 314px;
+    z-index: 2;
+}
+
+.ico > .fa-brands{
+    position: absolute;
+    width: 36px;
+    height: 36px;
+    font-size: 24px;
+    color: black;
+    left: 0px;
+    background-color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+}
+
+.ico > .fa-facebook-f{
+    top: 50px;
+}
+
+.ico > .fa-twitter{
+    top: 110px;
+}
+
+.ico > .fa-skype{
+    top: 170px;
+}
+
 #perso > div > figure > img{
     width: 240px;
     border-radius: 50%;
     filter: grayscale(100%);
     transition: 0.2s;
     margin-bottom: 24px;
+    z-index: 2;
 }
 
 #perso > div > figure > img:hover{
     transform: scale(1.1);
     filter: none;
 }
+
