@@ -55,7 +55,7 @@ li > a:hover{
     gap: 20px;
 }
 
-.fa-brands{
+#reseau > a >.fa-brands{
     color: white;
     font-size: larger;
 }
