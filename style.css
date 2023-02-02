@@ -3,6 +3,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
 }
 
 .partie{
@@ -22,7 +23,6 @@
 }
 
 .top > p{
-    width: 720px;
     font-size: 24px;
     text-align: center;
     color: gray;
@@ -71,6 +71,7 @@ ul{
 li > a{
     text-decoration: none;
     color: white;
+    transition: all 0.2s;
 }
 
 li > a:hover{
@@ -85,6 +86,7 @@ li > a:hover{
 #reseau > a >.fa-brands{
     color: white;
     font-size: larger;
+    transition: all 0.2s;
 }
 
 #reseau > a >.fa-brands:hover{
@@ -141,6 +143,7 @@ form{
     background-color: #1294b8;
     color: white;
     border: 0;
+    transition: all 0.2s;
 }
 
 #button:hover{
@@ -168,6 +171,10 @@ form{
     flex-direction: column;
     gap: 120px;
     padding-top: 80px;
+}
+
+#n2 > .top > p{
+    width: 720px;
 }
 
 
@@ -233,8 +240,8 @@ form{
     background-color: lightgray;
 }
 
-#n3 > p{
-    color: darkgray;
+#n3 > .top > p{
+    width: 720px;
 }
 
 
@@ -256,17 +263,13 @@ form{
     gap: 36px;
 }
 
-#n4 > h2{
+#n4 > .top > h2{
     width: 1160px;
-    font-size: 40px;
-    text-align: center;
     padding-top: 40px;
 }
 
-#n4 > p{
+#n4 > .top > p{
     width: 1160px;
-    font-size: 28px;
-    text-align: center;
 }
 
 #n4 > div{
@@ -323,7 +326,6 @@ form{
 .icores{
     position: absolute;
     z-index: 3;
-    left: -8px;
     width: 30px;
     height: 30px;
     font-size: 20px;
@@ -337,13 +339,13 @@ form{
     flex-wrap: wrap;
     transition: all .8s;
 }
-.fa-facebook-f{
+figure>a>.fa-facebook-f{
     top: -90px;
 }
-.fa-twitter{
+figure>a>.fa-twitter{
     top: -45px;
 }
-.fa-skype{
+figure>a>.fa-skype{
     top: 0px;
 }
 #perso > div > figure{
@@ -366,13 +368,13 @@ form{
     left: 24px;
     animation: 3s;
 }
-#perso>div:hover .fa-facebook-f{
+#perso>div:hover figure>a>.fa-facebook-f{
     top: 60px;
 }
-#perso>div:hover .fa-twitter{
+#perso>div:hover figure>a>.fa-twitter{
     top: 105px;
 }
-#perso>div:hover .fa-skype{
+#perso>div:hover figure>a>.fa-skype{
     top: 150px;
 }
 #perso > div:hover .imgperso{
@@ -456,12 +458,8 @@ form{
     justify-content: space-around;
 }
 
-#n5 > h2{
-
-}
-
-#n5 > p{
-    
+#n5 > .top > p{
+    width: 720px;
 }
 
 #clientgroupe{
@@ -476,9 +474,33 @@ form{
     min-width: 120px;
     width: 6.25vw;
     filter: brightness( 100%) contrast(0%);
+    transition: all 0.1s;
 }
 
 #clientgroupe > figure > img:hover{
     filter: brightness(0%) contrast(100%);
 }
 
+
+
+
+
+/* ---------- 6ème section ---------- */
+
+
+
+
+#n6{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#left > h2{ 
+    font-size: 36px;
+}
+
+#left > p{
+    font-size: 24px;
+    color: gray;
+}
