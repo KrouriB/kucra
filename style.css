@@ -450,7 +450,11 @@ form{
 
 
 
-
+#n5{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
 
 #n5 > h2{
 
@@ -471,5 +475,10 @@ form{
 #clientgroupe > figure > img{
     min-width: 120px;
     width: 6.25vw;
+    filter: brightness( 100%) contrast(0%);
+}
+
+#clientgroupe > figure > img:hover{
+    filter: brightness(0%) contrast(100%);
 }
 
