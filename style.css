@@ -44,7 +44,11 @@
     background: radial-gradient(rgb(139,195,245),#1294b8);
 }
 
+
+
 /* haut de page */
+
+
 
 header{
     display: flex;
@@ -56,10 +60,14 @@ header{
     color: white;
 }
 
+/* logo kucra */
+
 span{
     font-weight: 900;
     font-size: xx-large;
 }
+
+/* navbar */
 
 ul{
     display: flex;
@@ -78,6 +86,8 @@ li > a:hover{
     filter: invert(35%);
 }
 
+/* icone reseau */
+
 #reseau{
     display: flex;
     gap: 20px;
@@ -93,7 +103,11 @@ li > a:hover{
     filter: invert(35%);
 }
 
+
+
 /* partie principale */
+
+
 
 #principal{
     display: flex;
@@ -103,6 +117,10 @@ li > a:hover{
     gap: 240px;
     margin-top: 120px;
 }
+
+
+/* partie gauche */
+
 
 #weare{
     font-size: larger;
@@ -119,6 +137,8 @@ h1{
 #soush1{
     width: 480px;
 }
+
+/* input adresse mail + boutton submit */
 
 form{
     position: relative;
@@ -150,6 +170,10 @@ form{
     filter: brightness(125%);
 }
 
+
+/* partie droite */
+
+
 #imgsect1{
     width: 720px;
 }
@@ -177,6 +201,7 @@ form{
     width: 720px;
 }
 
+/* création des cartes et leur animation */
 
 #lescartes{
     display: flex;
@@ -199,7 +224,7 @@ form{
     border-radius: 16px;
     color: white;
     transition: all 1s;
-    box-shadow: 0px 35px 140px -60px black;
+    box-shadow: 0px 15px 140px -70px black;
 }
 
 .card:hover{
@@ -237,7 +262,7 @@ form{
     align-items: center;
     justify-content: center;
     gap: 160px;
-    background-color: lightgray;
+    background-color: whitesmoke;;
 }
 
 #n3 > .top > p{
@@ -280,6 +305,8 @@ form{
 #n4 > div{
     padding-top: 20px;
 }
+
+/* placement élément */
 
 .infodyna{
     display: flex;
@@ -392,7 +419,7 @@ figure>a>.fa-skype{
 
 
 
-
+/* parallax */
 
 #semisection{
     background-image: url(img/parallax.png);
@@ -402,6 +429,7 @@ figure>a>.fa-skype{
     background-size: cover;
 }
 
+/* filtre + titre et texte */
 
 #textpara{
     backdrop-filter: brightness(50%) grayscale(20%);
@@ -426,6 +454,8 @@ figure>a>.fa-skype{
     width: 1040px;
     text-align: center;
 }
+
+/* boutton get started */
 
 #getstart{
     text-decoration: none;
@@ -456,6 +486,7 @@ figure>a>.fa-skype{
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    background-color: whitesmoke;;
 }
 
 #n5 > .top > p{
@@ -490,6 +521,7 @@ figure>a>.fa-skype{
 
 
 
+
 #n6{
     display: flex;
     flex-direction: row;
@@ -505,6 +537,13 @@ figure>a>.fa-skype{
     flex-direction: column;
     gap: 90px;
 }
+
+
+/* partie de gauche */
+
+
+
+/* titre + sous texte */
 
 #left{
     display: flex;
@@ -523,6 +562,8 @@ figure>a>.fa-skype{
     width: 780px;
 }
 
+/* info chifre et boutton lien */
+
 #infon6{
     display: flex;
     flex-direction: row;
@@ -540,7 +581,7 @@ figure>a>.fa-skype{
 }
 
 #infoPlus{
-    background-color: rgb(47, 120, 255);
+    background-color: #3f8efd;
     color: white;
     font-size: 26px;
     width: 240px;
@@ -550,6 +591,157 @@ figure>a>.fa-skype{
     text-decoration: none;
 }
 
+
+/* image de droite */
+
+
 #n6 > figure > img{
     width: 780px;
+}
+
+
+
+
+
+/* ---------- 7ème section ---------- */
+
+
+
+
+
+
+#n7{
+    background-color: whitesmoke;
+}
+
+#n7 > .top > p{
+    width: 780px;
+}
+
+#grpcartesprix{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 40px;
+}
+
+/* création des carte de prix */
+
+.carteprix{
+    position: relative;
+    width: 400px;
+    height: 500px;
+    border-radius: 18px;
+    box-shadow: 0px 0px 40px -25px black;
+    background-color: white;
+}
+
+.interieureCarte{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    padding-top: 30px;
+}
+
+.interieureCarte > h3{
+    font-size: 18px;
+}
+
+.prixmois{
+    display: flex;
+    flex-direction: row;
+    height: 60px;
+}
+
+.currency , .prix{
+    color: #3f8efd;
+}
+.currency{
+    font-size: 40px;
+    display: flex;
+    align-items: flex-start;
+}
+.prix{
+    font-size: 60px;
+    display: flex;
+    align-items: center;
+}
+.parmois{
+    color: gray;
+    font-size: 10px;
+    display: flex;
+    align-items: flex-end;
+}
+
+.infolignes{
+    display: flex;
+    flex-direction: row;
+    gap: 60px;
+}
+
+.typeinfo, .valueinfo{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 140px;
+    font-size: 16px;
+}
+
+.valueinfo{
+    text-align: right;
+}
+
+.fa-circle-check{
+    color: green;
+}
+
+.fa-circle-xmark{
+    color: red;
+}
+
+.interieureCarte > a{
+    border: 2px solid #3f8efd;
+    border-radius: 8px;
+    width: 360px;
+    padding: 12px 0;
+    text-align: center;
+    text-decoration: none;
+}
+
+/* pack starter + professional */
+
+#starter ,#professional{
+    margin-top: 120px;
+}
+
+#starter > .interieureCarte > a,#professional > .interieureCarte > a{
+    color: #3f8efd;
+}
+
+/* pack advanced */
+
+#advanced{
+    margin-top: 60px;
+}
+
+#advanced > .interieureCarte > a{
+    color: white;
+    background-color: #3f8efd;
+}
+
+#reduc{
+    position: absolute;
+    font-size: 19px;
+    right: 0;
+    top: 0;
+    width: 80px;
+    height: 80px;
+    border-top-right-radius: 18px;
+    border-bottom-left-radius: 18px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    background-color: #3f8efd;
+    color: white;
 }
