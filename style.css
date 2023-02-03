@@ -774,14 +774,15 @@ figure>a>.fa-skype{
 }
 
 .partBlog{
-    position: relative;
     width: 430px;
 }
 
+.imgPost{
+    position: relative;
+    border-radius: 10px;
+}
+
 .figBlog{
-    display: flex;
-    flex-direction: column;
-    gap: 14px;
     border-radius: 10px;
 }
 
@@ -790,7 +791,13 @@ figure>a>.fa-skype{
     border-radius: 10px;
 }
 
-.figBlog > figcaption > h3{
+.sousPost{
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.sousPost > h3{
     font-size: 22px;
 }
 
@@ -800,7 +807,26 @@ figure>a>.fa-skype{
     font-size: 16px;
 }
 
-.figBlog > figcaption > a{
+.sousPost > a{
     text-decoration: none;
     font-size: 20px;
+}
+
+.infoPost{
+    position: absolute;
+    color: transparent;
+    top: 0;
+    left: 0;
+    border-radius: 10px;
+    padding: 10%;
+    width: 100%;
+    height: 97.5%;
+    transition: all 0.2s;
+}
+
+/* animation des image info */
+
+.imgPost:hover .infoPost{
+    backdrop-filter: brightness(40%);
+    color: white;
 }
