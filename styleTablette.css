@@ -1,11 +1,97 @@
 @media  (max-width: 960px){
 
+    .top{
+        max-width: 100% ;
+    }
+
+    h1 , #mail , #imgsect1 , .card , #clientgroupe > figure > img , .carteprix , .infodyna > .infochiffre , .figPerso , .imgperso , #n6 > figure > img , #infoPlus{
+        min-width: 1px;
+    }
+    
+    /* section 1 */
+
     header{
         display: flex;
         flex-direction: column;
-        gap: 0;
+        gap: 1vh;
+        padding-top: 10px;
     }
 
-    
+    #principal{
+        margin-top: 6vh;
+    }
 
+    h1, #soush1, #mail{
+        width: 80vw;
+    }
+
+    h1{
+        font-size: 48px;
+    }    
+
+    #imgsect1{
+        width: 65vw;
+    }
+
+    /* section 2 */
+
+    #n2{
+        padding-bottom: 5vh;
+    }
+
+    .card{
+        width: 80vw;
+        height: 60vh;
+    }
+
+    /* section 4 */
+
+    .infodyna{
+        gap: 80px;
+        padding-bottom: 5vh;
+    }
+
+    #chiffre{
+        padding-bottom: 40px;
+    }
+
+    .figPerso , .infodyna > .infochiffre{
+        width: 35vw !important;
+    }
+
+    .imgperso{
+        width: 35vw;
+    }
+
+    /* section 5 */
+
+    #clientgroupe{
+        padding: 5vh 0;
+    }
+
+    #clientgroupe > figure > img{
+        width: 50vw;
+    }
+
+    /* section 6 */
+
+    #n6{
+        padding: 5vh 0;
+
+    }
+
+    #infoPlus{
+        width: 30vw;
+    }
+
+    #n6 > figure > img{
+        width: 80vw;
+    }
+
+    /* section 7 */
+
+    .carteprix{
+        width: 80vw;
+        height: 75vh;
+    }
 }
