@@ -894,7 +894,6 @@ footer > ul{
 footer > ul li{
     border-right: 1px solid #838486;
     display: inline-block;
-    float: left;
     padding: 0 40px;
 }
 
