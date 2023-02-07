@@ -179,8 +179,7 @@ form{
 
 
 #imgsect1{
-    width: 37.5vw;
-    min-width: 720px;
+    height: 70vh;
 }
 
 
@@ -675,25 +674,28 @@ form{
 .prixmois{
     display: flex;
     flex-direction: row;
-    height: 60px;
+    height: 5.5vh;
 }
 
 .currency , .prix{
     color: #3f8efd;
 }
+
 .currency{
-    font-size: 40px;
+    font-size: 3.7vh;
     display: flex;
     align-items: flex-start;
 }
+
 .prix{
-    font-size: 60px;
+    font-size: 5.5vh;
     display: flex;
     align-items: center;
 }
+
 .parmois{
     color: gray;
-    font-size: 10px;
+    font-size: 0.9vh;
     display: flex;
     align-items: flex-end;
 }
