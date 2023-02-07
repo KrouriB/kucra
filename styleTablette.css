@@ -1,4 +1,4 @@
-@media  (max-width: 960px){
+@media  (max-width: 1080px){
 
     .top{
         max-width: 100% ;
@@ -102,10 +102,14 @@
     /* section 7 */
 
     
-        .carteprix{
-            width: 80vw;
-            height: 85vh;
-        } 
+    .carteprix{
+        width: 80vw;
+        height: 85vh;
+    }
+    
+    #starter ,#advanced ,#professional{
+        margin-top: 4vh;
+    }
     
     .interieureCarte{
         gap: 5vh;
