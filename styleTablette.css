@@ -146,5 +146,21 @@
     
     /* section 8 */
 
-    
+    #n8 > .top > p{
+        width: 80vw;
+    }
+
+    #grpBlog{
+        gap: 1vh;
+    }    
+
+    .partBlog{
+        flex-basis: 100%;
+        max-width: 80%;
+    }
+
+    .paraBlog{
+        width: 80vw;
+    }
+
 }
