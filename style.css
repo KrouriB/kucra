@@ -72,8 +72,15 @@ header > span{
 header > ul{
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
     list-style-type: none;
     gap: 24px;
+}
+
+header > ul > li{
+    width:  6vw;
+    text-align: center;
 }
 
 header > ul > li > a{
@@ -364,9 +371,9 @@ form{
     position: absolute;
     z-index: 3;
     width: 0.015625vw;
-    min-width: 30px;
+    min-width: 20px;
     height: 2.8vh;
-    min-height: 30px;
+    min-height: 20  px;
     font-size: 1.8vh;
     color: black;
     left: -120px;
@@ -405,17 +412,17 @@ form{
 /* annimation hover */
 
 #perso>div:hover .icores{
-    left: 1.5vw;
+    left: 10%;
     animation: 3s;
 }
 #perso>div:hover .figPerso>a>.fa-facebook-f{
-    top: 5.5vh;
+    top: 35%;
 }
 #perso>div:hover .figPerso>a>.fa-twitter{
-    top: 9.7vh;
+    top: 50%;
 }
 #perso>div:hover .figPerso>a>.fa-skype{
-    top: 13.9vh;
+    top: 65%;
 }
 #perso > div:hover .imgperso{
     transform: scale(1.1);
@@ -967,6 +974,7 @@ footer > ul li:last-child{
     border-radius: 50%;
     width: 60px;
     height: 60px;
+    z-index: 99;
 }
 
 #myBtn > i{

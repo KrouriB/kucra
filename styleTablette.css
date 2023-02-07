@@ -4,7 +4,7 @@
         max-width: 100% ;
     }
 
-    h1 , #mail , #imgsect1 , .card , #clientgroupe > figure > img , .carteprix , .infodyna > .infochiffre , .figPerso , .imgperso , #n6 > figure > img , #infoPlus{
+    h1 , #mail , #imgsect1 , .card , #clientgroupe > figure > img , .carteprix , .infodyna > .infochiffre , .figPerso , .imgperso , #n6 > figure > img , #infoPlus {
         min-width: 1px;
     }
     
@@ -13,19 +13,22 @@
     header{
         display: flex;
         flex-direction: column;
-        gap: 1vh;
+        gap: 1.6vh;
         padding-top: 10px;
     }
-
-    /* logo kucra */
 
     header > span{
         font-weight: 900;
         font-size: larger;
     }
 
+    header > ul > li{
+        width:  20vw;
+    }
+
     #principal{
         margin-top: 6vh;
+        gap: 4vh;
     }
 
     h1, #soush1, #mail{
