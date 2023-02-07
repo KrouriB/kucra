@@ -94,4 +94,23 @@
         width: 80vw;
         height: 75vh;
     }
+
+    .interieureCarte{
+        gap: 6vh;
+    }
+
+    .infolignes{
+        gap: 20vw;
+    }
+
+    .typeinfo, .valueinfo{
+        width: 25vw;
+        gap: 3.36vh;
+        font-size: 2.5vh;
+    }
+
+    .interieureCarte > a{
+        width: 55vw;
+        padding: 1.8vh 0;
+    }
 }
