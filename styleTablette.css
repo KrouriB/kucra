@@ -17,20 +17,31 @@
         padding-top: 10px;
     }
 
+    /* logo kucra */
+
+    header > span{
+        font-weight: 900;
+        font-size: larger;
+    }
+
     #principal{
         margin-top: 6vh;
     }
 
     h1, #soush1, #mail{
-        width: 80vw;
+        width: 90vw;
     }
 
     h1{
-        font-size: 48px;
-    }    
+        font-size: 30px;
+    }
+
+    #soush1{
+        font-size: 18px;
+    }
 
     #imgsect1{
-        width: 65vw;
+        height: 40vh;
     }
 
     /* section 2 */
@@ -90,13 +101,32 @@
 
     /* section 7 */
 
-    .carteprix{
-        width: 80vw;
-        height: 75vh;
+    
+        .carteprix{
+            width: 80vw;
+            height: 85vh;
+        } 
+    
+    .interieureCarte{
+        gap: 5vh;
+    }
+    
+    .prixmois{
+        height: 11vh;
+    }
+    
+    .currency{
+        font-size: 7.4vh;
     }
 
-    .interieureCarte{
-        gap: 6vh;
+    .prix{
+        font-size: 11vh;
+        display: flex;
+        align-items: center;
+    }
+
+    .parmois{
+        font-size: 1.8vh;
     }
 
     .infolignes{
@@ -113,4 +143,8 @@
         width: 55vw;
         padding: 1.8vh 0;
     }
+    
+    /* section 8 */
+
+    
 }
