@@ -79,7 +79,7 @@ header > ul{
 }
 
 header > ul > li{
-    width:  6vw;
+    width:  5.5vw;
     text-align: center;
 }
 
@@ -373,7 +373,7 @@ form{
     width: 0.015625vw;
     min-width: 20px;
     height: 2.8vh;
-    min-height: 20  px;
+    min-height: 20px;
     font-size: 1.8vh;
     color: black;
     left: -120px;
@@ -806,6 +806,7 @@ form{
     gap: 3vw;
     margin-top: 80px;
     width: 100%;
+    padding-bottom: 4vh;
 }
 
 .partBlog{

@@ -1,4 +1,4 @@
-@media  (max-width: 1080px){
+@media  (max-height: 1080px) and (orientation:portrait){
 
     .top{
         max-width: 100% ;
@@ -6,7 +6,12 @@
 
     h1 , #mail , #imgsect1 , .card , #clientgroupe > figure > img , .carteprix , .infodyna > .infochiffre , .figPerso , .imgperso , #n6 > figure > img , #infoPlus {
         min-width: 1px;
+        min-height: 1px;
     }
+
+    /* .top > p{
+        width: 87%;
+    } */
     
     /* section 1 */
 
@@ -31,6 +36,10 @@
         gap: 4vh;
     }
 
+    #weare{
+        gap: 15px;
+    }
+
     h1, #soush1, #mail{
         width: 90vw;
     }
@@ -53,12 +62,24 @@
         padding-bottom: 5vh;
     }
 
+    #n2 > .top > p {
+        width: 87%;
+    }
+
     .card{
         width: 80vw;
         height: 60vh;
     }
 
     /* section 4 */
+
+    #n4 > .top > h2{
+        width: 70vw;
+    }
+
+    #n4 > .top > p{
+        width: 87vw;
+    }
 
     .infodyna{
         gap: 80px;
@@ -77,7 +98,17 @@
         width: 35vw;
     }
 
+    /* semi */
+
+    #textpara > p{
+        width: 80vw;
+    }
+
     /* section 5 */
+
+    #n5 > .top > p{
+        width: 87%;
+    }
 
     #clientgroupe{
         padding: 5vh 0;
@@ -91,7 +122,10 @@
 
     #n6{
         padding: 5vh 0;
+    }
 
+    #left > p{
+        width: 80%;
     }
 
     #infoPlus{
@@ -103,6 +137,10 @@
     }
 
     /* section 7 */
+
+    #n7 > .top > p{
+        width: 87%;
+    }
 
     
     .carteprix{
@@ -137,11 +175,11 @@
     }
 
     .infolignes{
-        gap: 20vw;
+        gap: 14vw;
     }
 
     .typeinfo, .valueinfo{
-        width: 25vw;
+        width: 28vw;
         gap: 3.36vh;
         font-size: 2.5vh;
     }
@@ -159,6 +197,229 @@
 
     #grpBlog{
         gap: 1vh;
+    }    
+
+    .partBlog{
+        flex-basis: 100%;
+        max-width: 80%;
+    }
+
+    .paraBlog{
+        width: 80vw;
+    }
+
+}
+
+@media  (max-width: 1080px) and (orientation:landscape){
+    .top{
+        max-width: 100% ;
+    }
+
+    h1 , #mail , #imgsect1 , .card , #clientgroupe > figure > img , .carteprix , .infodyna > .infochiffre , .figPerso , .imgperso , #n6 > figure > img , #infoPlus {
+        min-width: 1px;
+        min-height: 1px;
+    }
+
+    /* .top > p{
+        width: 87%;
+    } */
+    
+    /* section 1 */
+
+    header{
+        display: flex;
+        flex-direction: column;
+        gap: 1.6vh;
+        padding-top: 10px;
+    }
+
+    header > span{
+        font-weight: 900;
+        font-size: larger;
+    }
+
+    header > ul{
+        gap: 0.2vw;
+    }
+
+    header > ul > li{
+        width:  20vw;
+    }
+
+    #principal{
+        margin-top: 8vh;
+        gap: 4vh;
+    }
+
+    #weare{
+        gap: 15px;
+    }
+
+    h1, #soush1, #mail{
+        width: 46vw;
+    }
+
+    h1{
+        font-size: 24px;
+    }
+
+    #soush1{
+        font-size: 14px;
+    }
+
+    #imgsect1{
+        height: 40vh;
+    }
+
+    /* section 2 */
+
+    #n2{
+        padding-bottom: 5vh;
+    }
+
+    #n2 > .top > p{
+        width: 87vw;
+    }
+
+    .card{
+        width: 80vw;
+        height: 60vh;
+    }
+
+    /* section 4 */
+
+    #n4 > .top > h2{
+        width: 70vw;
+    }
+
+    #n4 > .top > p{
+        width: 87%;
+    }
+
+    .infodyna{
+        gap: 80px;
+        padding-bottom: 5vh;
+    }
+
+    #chiffre{
+        padding-bottom: 40px;
+    }
+
+    .figPerso , .infodyna > .infochiffre{
+        width: 35vw !important;
+    }
+
+    .imgperso{
+        width: 35vw;
+    }
+
+    /* semi */
+
+    #textpara > p{
+        width: 80vw;
+    }
+
+    /* section 5 */
+
+    #n5 > .top > p{
+        width: 87%;
+    }
+
+    #clientgroupe{
+        padding: 5vh 0;
+    }
+
+    #clientgroupe > figure > img{
+        width: 50vw;
+    }
+
+    /* section 6 */
+
+    #n6{
+        padding: 5vh 0;
+    }
+
+    #left > p{
+        width: 80%;
+    }
+
+    #infoPlus{
+        width: 30vw;
+    }
+
+    #n6 > figure > img{
+        width: 80vw;
+    }
+
+    /* section 7 */
+
+    #n7 > .top{
+        padding-top: 6px;
+    }
+
+    #n7 > .top > p{
+        width: 87%;
+    }
+
+    #grpcartesprix{
+        padding-bottom: 5vh;
+    }
+    
+    .carteprix{
+        width: 80vw;
+        height: 90vh;
+    }
+    
+    #starter ,#advanced ,#professional{
+        margin-top: 0vh;
+    }
+    
+    .interieureCarte{
+        padding-top: 10px;
+        gap: 5vh;
+    }
+    
+    .prixmois{
+        height: 14vh;
+    }
+    
+    .currency{
+        font-size: 8.6vh;
+    }
+
+    .prix{
+        font-size: 14vh;
+        display: flex;
+        align-items: center;
+    }
+
+    .parmois{
+        font-size: 2.4vh;
+    }
+
+    .infolignes{
+        gap: 14vw;
+    }
+
+    .typeinfo, .valueinfo{
+        width: 28vw;
+        gap: 3.36vh;
+        font-size: 4vh;
+    }
+
+    .interieureCarte > a{
+        width: 55vw;
+        padding: 1.8vh 0;
+    }
+    
+    /* section 8 */
+
+    #n8 > .top > p{
+        width: 80vw;
+    }
+
+    #grpBlog{
+        gap: 5vh;
     }    
 
     .partBlog{
