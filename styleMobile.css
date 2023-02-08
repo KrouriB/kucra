@@ -1,9 +1,29 @@
-@media (max-width: 640px){
+@media (max-height: 780px) and (orientation:portrait){
 
     /* section 1 */
 
+    header{
+        flex-direction: row;
+        align-items: flex-start;
+        gap: 10vw;
+    }
+
+    header > span{
+        font-weight: 900;
+        font-size: large;
+    }
+
+    header > ul{
+        gap: 0px;
+        width: 50vw;
+    }
+
     header > ul > li{
-        width:  40vw;
+        width:  25vw;
+    }
+
+    #reseau{
+        flex-direction: column;
     }
     
     #principal{
@@ -25,6 +45,111 @@
     #imgsect1{
         height: 28vh;
     }
+
+    /* section 4 */
+
+    .figPerso , .infodyna > .infochiffre{
+        width: 50vw !important;
+    }
+
+    .imgperso{
+        width: 50vw;
+    }
+
+    #semisection{
+        height: 80vh;
+    }
+
+    #left > h2{ 
+        font-size: 30px;    
+    }
+
+    #left > p{
+        font-size: 18px;
+    }
+
+    #infon6{
+        gap: 60px;
+    }
+
+    #infoPlus{
+        width: 60vw;
+    }
+
+    .carteprix{
+        width: 90vw;
+        height: 95vh;
+    }
+
+    .interieureCarte{
+        gap: 8vh;
+    }
+
+    .infolignes{
+        gap: 0vw;
+    }
+
+    .typeinfo, .valueinfo{
+        width: 40vw;
+        gap: 3.36vh;
+        font-size: 2vh;
+    }
+
+
+
+    /* footer */
+
+    footer > ul ,footer > p{
+        font-size: 12px;
+    }
+
+    footer > ul li{
+        padding: 0 4px;
+    }
+
+}
+
+@media (max-width: 780px) and (orientation:landscape){
+
+    .partie{
+        height: fit-content;
+    }
+
+    /* section 1 */
+
+    header > ul{
+        width: 60vw;
+    }
+
+    header > ul > li{
+        width:  12vw;
+    }
+    
+    #principal{
+        margin-top: 3vh;
+    }
+
+    /* h1, #soush1, #mail{
+        width: vw;
+    } */
+
+    h1{
+        font-size: 18px;
+    }
+
+    #soush1{
+        font-size: 10px;
+    }
+
+    #imgsect1{
+        height: 60vh;
+    }
+
+    /* section 2 */
+
+
+
+    /* section 4 */
 
     .figPerso , .infodyna > .infochiffre{
         width: 50vw !important;

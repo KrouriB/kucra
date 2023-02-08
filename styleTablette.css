@@ -15,8 +15,7 @@
     
     /* section 1 */
 
-    header{
-        display: flex;
+    header{ 
         flex-direction: column;
         gap: 1.6vh;
         padding-top: 10px;
@@ -27,13 +26,19 @@
         font-size: larger;
     }
 
+    header > ul{
+        flex-wrap: wrap;
+        gap: 1vh;
+    }
+
     header > ul > li{
         width:  20vw;
     }
 
     #principal{
-        margin-top: 6vh;
+        margin-top: 2vh;
         gap: 4vh;
+        flex-wrap: wrap-reverse;
     }
 
     #weare{
@@ -122,6 +127,7 @@
 
     #n6{
         padding: 5vh 0;
+        flex-wrap: wrap-reverse;
     }
 
     #left > p{
@@ -210,6 +216,10 @@
 
 }
 
+
+
+
+
 @media  (max-width: 1080px) and (orientation:landscape){
     .top{
         max-width: 100% ;
@@ -227,8 +237,6 @@
     /* section 1 */
 
     header{
-        display: flex;
-        flex-direction: column;
         gap: 1.6vh;
         padding-top: 10px;
     }
@@ -240,14 +248,16 @@
 
     header > ul{
         gap: 0.2vw;
+        width: 70vw;
+        flex-wrap: wrap;
     }
 
     header > ul > li{
-        width:  20vw;
+        width:  15vw;
     }
 
     #principal{
-        margin-top: 8vh;
+        margin-top: 16vh;
         gap: 4vh;
     }
 
@@ -337,6 +347,7 @@
 
     #n6{
         padding: 5vh 0;
+        flex-wrap: wrap-reverse;
     }
 
     #left > p{
