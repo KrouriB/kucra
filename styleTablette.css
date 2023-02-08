@@ -172,8 +172,6 @@
 
     .prix{
         font-size: 11vh;
-        display: flex;
-        align-items: center;
     }
 
     .parmois{
@@ -400,8 +398,6 @@
 
     .prix{
         font-size: 14vh;
-        display: flex;
-        align-items: center;
     }
 
     .parmois{

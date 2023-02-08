@@ -464,6 +464,10 @@ form{
     color: white;
 }
 
+#textpara > h2 , #textpara > p{
+    padding: 0 3vw;
+}
+
 #textpara > h2{
     font-size: 40px;
 }
