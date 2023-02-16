@@ -69,26 +69,89 @@ header > span{
 
 /* navbar */
 
-header > ul{
+/* menu burger */
+
+#menu__toggle {
+    opacity: 0;
+}
+
+#menu__toggle:checked ~ .menu__btn > span {
+    transform: rotate(45deg);
+}
+#menu__toggle:checked ~ .menu__btn > span::before {
+    top: 0;
+    transform: rotate(0);
+}
+#menu__toggle:checked ~ .menu__btn > span::after {
+    top: 0;
+    transform: rotate(90deg);
+}
+#menu__toggle:checked ~ #ulNav {
+    visibility: visible ;
+    top: 0;
+    z-index: 5;
+}
+
+.menu__btn {
+    display: flex;
+    align-items: center;
+    position: fixed;
+    visibility: hidden;
+    top: 20px;
+    left: 20px;
+
+    width: 26px;
+    height: 26px;
+
+    cursor: pointer;
+    z-index: 6;
+}
+
+.menu__btn > span,
+.menu__btn > span::before,
+.menu__btn > span::after {
+    display: block;
+    position: absolute;
+
+    width: 100%;
+    height: 2px;
+
+    background-color: #616161;
+
+    transition-duration: .25s;
+}
+.menu__btn > span::before {
+    content: '';
+    top: -8px;
+}
+.menu__btn > span::after {
+    content: '';
+    top: 8px;
+}
+
+/* ul li du haut */
+
+#ulNav{
     display: flex;
     flex-direction: row;
     justify-content: center;
     list-style-type: none;
     gap: 24px;
+    z-index: -1;
 }
 
-header > ul > li{
+#ulNav > li{
     width:  5.5vw;
     text-align: center;
 }
 
-header > ul > li > a{
+#ulNav > li > a{
     text-decoration: none;
     color: white;
     transition: all 0.2s;
 }
 
-header > ul > li > a:hover{
+#ulNav > li > a:hover{
     filter: invert(35%);
 }
 
@@ -150,6 +213,7 @@ h1{
 
 form{
     position: relative;
+    z-index: 4;
 }
 
 #mail{

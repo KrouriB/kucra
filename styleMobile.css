@@ -13,15 +13,6 @@
         font-size: large;
     }
 
-    header > ul{
-        gap: 0px;
-        width: 50vw;
-    }
-
-    header > ul > li{
-        width:  25vw;
-    }
-
     #reseau{
         flex-direction: column;
     }
@@ -131,13 +122,6 @@
 
     /* section 1 */
 
-    header > ul{
-        width: 60vw;
-    }
-
-    header > ul > li{
-        width:  12vw;
-    }
     
     #principal{
         margin-top: 3vh;
