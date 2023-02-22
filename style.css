@@ -100,7 +100,7 @@ header>span {
 #menu__toggle:checked~#ulNav {
 	visibility: visible;
 	top: 0;
-	z-index: 5;
+	z-index: 6;
 	opacity: 1;
 	display: block;
 }
@@ -117,7 +117,7 @@ header>span {
 	height: 26px;
 
 	cursor: pointer;
-	z-index: 6;
+	z-index: 7;
 }
 
 .menu__btn>span,
@@ -324,7 +324,7 @@ form {
 	transform: translateY(-40px);
 }
 
-.fa-solid {
+.card>.fa-solid {
 	color: white;
 	font-size: 60px;
 }
@@ -1069,9 +1069,55 @@ footer>ul li:last-child {
 	border-radius: 50%;
 	width: 60px;
 	height: 60px;
-	z-index: 99;
+	z-index: 5;
 }
 
 #myBtn>i {
 	font-size: 30px;
+}
+
+
+
+
+
+
+/* ---------- Bouton mode couleur ---------- */
+
+
+
+
+
+
+
+
+
+#colorswap {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: fixed;
+	top: 10vh;
+	right: 0;
+	border: none;
+	background-color: #3c3c3c;
+	color: white;
+	cursor: pointer;
+	width: 60px;
+	height: 60px;
+	z-index: 5;
+}
+
+#colorswap>.fa-solid {
+	font-size: 30px;
+}
+
+#parabox {
+	position: fixed;
+	top: 12.5vh;
+	left: 5vw;
+	height: 75vh;
+	width: 90vw;
+	border-radius: 50px;
+	background-color: white;
+	z-index: 8;
 }
