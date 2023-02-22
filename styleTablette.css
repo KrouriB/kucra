@@ -1,254 +1,254 @@
-@media  (max-height: 1080px) and (orientation:portrait){
+@media (max-height: 1080px) and (orientation:portrait) {
 
-    .top{
-        max-width: 100% ;
-    }
+	.top {
+		max-width: 100%;
+	}
 
-    h1 , #mail , #imgsect1 , .card , #clientgroupe > figure > img , .carteprix , .infodyna > .infochiffre , .figPerso , .imgperso , #n6 > figure > img , #infoPlus {
-        min-width: 1px;
-        min-height: 1px;
-    }
+	h1, #mail, #imgsect1, .card, #clientgroupe>figure>img, .carteprix, .infodyna>.infochiffre, .figPerso, .imgperso, #n6>figure>img, #infoPlus {
+		min-width: 1px;
+		min-height: 1px;
+	}
 
-    /* .top > p{
+	/* .top > p{
         width: 87%;
     } */
-    
-    /* section 1 */
 
-    header{ 
-        flex-direction: column;
-        gap: 1.6vh;
-        padding-top: 10px;
-    }
+	/* section 1 */
 
-    header > span{
-        font-weight: 900;
-        font-size: larger;
-    }
+	header {
+		flex-direction: column;
+		gap: 1.6vh;
+		padding-top: 10px;
+	}
 
-    .menu__btn{
-        visibility: visible;
-    }
+	header>span {
+		font-weight: 900;
+		font-size: larger;
+	}
 
-    #ulNav{
-        display: block;
-        position: fixed;
-        visibility: visible;
-        text-align: center;
-        top: 0%;
-        left: 0%;
+	.menu__btn {
+		visibility: visible;
+	}
 
-        width: 100%;
-        height: 100%;
+	#ulNav {
+		display: none;
+		position: fixed;
+		visibility: visible;
+		text-align: center;
+		top: 0%;
+		left: 0%;
 
-        margin: 0;
-        padding: 80px 0;
+		width: 100%;
+		height: 100%;
 
-        list-style: none;
+		margin: 0;
+		padding: 80px 0;
 
-        background-color: #ECEFF1;
-        box-shadow: 1px 0px 6px rgba(0, 0, 0, .2);
+		list-style: none;
 
-        transition-duration: .25s;
-    }
+		background-color: #ECEFF1;
+		box-shadow: 1px 0px 6px rgba(0, 0, 0, .2);
+
+		transition-duration: .25s;
+	}
 
 
-    #ulNav > li{
-        width:  100vw;
-    }
+	#ulNav>li {
+		width: 100vw;
+	}
 
-    #ulNav > li > a{
-        text-align : center;
-        display: block;
-        padding: 12px 24px;
+	#ulNav>li>a {
+		text-align: center;
+		display: block;
+		padding: 12px 24px;
 
-        color: #333;
+		color: #333;
 
-        font-family: 'Roboto', sans-serif;
-        font-size: 20px;
-        font-weight: 600;
+		font-family: 'Roboto', sans-serif;
+		font-size: 20px;
+		font-weight: 600;
 
-        text-decoration: none;
+		text-decoration: none;
 
-        transition-duration: .25s;
-    }
+		transition-duration: .25s;
+	}
 
-    #principal{
-        margin-top: 2vh;
-        gap: 4vh;
-        flex-wrap: wrap-reverse;
-    }
+	#principal {
+		margin-top: 2vh;
+		gap: 4vh;
+		flex-wrap: wrap-reverse;
+	}
 
-    #weare{
-        gap: 15px;
-    }
+	#weare {
+		gap: 15px;
+	}
 
-    h1, #soush1, #mail{
-        width: 90vw;
-    }
+	h1, #soush1, #mail {
+		width: 90vw;
+	}
 
-    h1{
-        font-size: 30px;
-    }
+	h1 {
+		font-size: 30px;
+	}
 
-    #soush1{
-        font-size: 18px;
-    }
+	#soush1 {
+		font-size: 18px;
+	}
 
-    #imgsect1{
-        height: 40vh;
-    }
+	#imgsect1 {
+		height: 40vh;
+	}
 
-    /* section 2 */
+	/* section 2 */
 
-    #n2{
-        padding-bottom: 5vh;
-    }
+	#n2 {
+		padding-bottom: 5vh;
+	}
 
-    #n2 > .top > p {
-        width: 87%;
-    }
+	#n2>.top>p {
+		width: 87%;
+	}
 
-    .card{
-        width: 80vw;
-        height: 60vh;
-    }
+	.card {
+		width: 80vw;
+		height: 60vh;
+	}
 
-    /* section 4 */
+	/* section 4 */
 
-    #n4 > .top > h2{
-        width: 70vw;
-    }
+	#n4>.top>h2 {
+		width: 70vw;
+	}
 
-    #n4 > .top > p{
-        width: 87vw;
-    }
+	#n4>.top>p {
+		width: 87vw;
+	}
 
-    .infodyna{
-        gap: 80px;
-        padding-bottom: 5vh;
-    }
+	.infodyna {
+		gap: 80px;
+		padding-bottom: 5vh;
+	}
 
-    #chiffre{
-        padding-bottom: 40px;
-    }
+	#chiffre {
+		padding-bottom: 40px;
+	}
 
-    .figPerso , .infodyna > .infochiffre{
-        width: 35vw !important;
-    }
+	.figPerso, .infodyna>.infochiffre {
+		width: 35vw !important;
+	}
 
-    .imgperso{
-        width: 35vw;
-    }
+	.imgperso {
+		width: 35vw;
+	}
 
-    /* semi */
+	/* semi */
 
-    #textpara > p{
-        width: 80vw;
-    }
+	#textpara>p {
+		width: 80vw;
+	}
 
-    /* section 5 */
+	/* section 5 */
 
-    #n5 > .top > p{
-        width: 87%;
-    }
+	#n5>.top>p {
+		width: 87%;
+	}
 
-    #clientgroupe{
-        padding: 5vh 0;
-    }
+	#clientgroupe {
+		padding: 5vh 0;
+	}
 
-    #clientgroupe > figure > img{
-        width: 50vw;
-    }
+	#clientgroupe>figure>img {
+		width: 50vw;
+	}
 
-    /* section 6 */
+	/* section 6 */
 
-    #n6{
-        padding: 5vh 0;
-        flex-wrap: wrap-reverse;
-    }
+	#n6 {
+		padding: 5vh 0;
+		flex-wrap: wrap-reverse;
+	}
 
-    #left > p{
-        width: 80%;
-    }
+	#left>p {
+		width: 80%;
+	}
 
-    #infoPlus{
-        width: 30vw;
-    }
+	#infoPlus {
+		width: 30vw;
+	}
 
-    #n6 > figure > img{
-        width: 80vw;
-    }
+	#n6>figure>img {
+		width: 80vw;
+	}
 
-    /* section 7 */
+	/* section 7 */
 
-    #n7 > .top > p{
-        width: 87%;
-    }
+	#n7>.top>p {
+		width: 87%;
+	}
 
-    
-    .carteprix{
-        width: 80vw;
-        height: 85vh;
-    }
-    
-    #starter ,#advanced ,#professional{
-        margin-top: 4vh;
-    }
-    
-    .interieureCarte{
-        gap: 5vh;
-    }
-    
-    .prixmois{
-        height: 11vh;
-    }
-    
-    .currency{
-        font-size: 7.4vh;
-    }
 
-    .prix{
-        font-size: 11vh;
-    }
+	.carteprix {
+		width: 80vw;
+		height: 85vh;
+	}
 
-    .parmois{
-        font-size: 1.8vh;
-    }
+	#starter, #advanced, #professional {
+		margin-top: 4vh;
+	}
 
-    .infolignes{
-        gap: 14vw;
-    }
+	.interieureCarte {
+		gap: 5vh;
+	}
 
-    .typeinfo, .valueinfo{
-        width: 28vw;
-        gap: 3.36vh;
-        font-size: 2.5vh;
-    }
+	.prixmois {
+		height: 11vh;
+	}
 
-    .interieureCarte > a{
-        width: 55vw;
-        padding: 1.8vh 0;
-    }
-    
-    /* section 8 */
+	.currency {
+		font-size: 7.4vh;
+	}
 
-    #n8 > .top > p{
-        width: 80vw;
-    }
+	.prix {
+		font-size: 11vh;
+	}
 
-    #grpBlog{
-        gap: 1vh;
-    }    
+	.parmois {
+		font-size: 1.8vh;
+	}
 
-    .partBlog{
-        flex-basis: 100%;
-        max-width: 80%;
-    }
+	.infolignes {
+		gap: 14vw;
+	}
 
-    .paraBlog{
-        width: 80vw;
-    }
+	.typeinfo, .valueinfo {
+		width: 28vw;
+		gap: 3.36vh;
+		font-size: 2.5vh;
+	}
+
+	.interieureCarte>a {
+		width: 55vw;
+		padding: 1.8vh 0;
+	}
+
+	/* section 8 */
+
+	#n8>.top>p {
+		width: 80vw;
+	}
+
+	#grpBlog {
+		gap: 1vh;
+	}
+
+	.partBlog {
+		flex-basis: 100%;
+		max-width: 80%;
+	}
+
+	.paraBlog {
+		width: 80vw;
+	}
 
 }
 
@@ -256,260 +256,260 @@
 
 
 
-@media  (max-width: 1080px) and (orientation:landscape){
-    .top{
-        max-width: 100% ;
-    }
+@media (max-width: 1080px) and (orientation:landscape) {
+	.top {
+		max-width: 100%;
+	}
 
-    h1 , #mail , #imgsect1 , .card , #clientgroupe > figure > img , .carteprix , .infodyna > .infochiffre , .figPerso , .imgperso , #n6 > figure > img , #infoPlus {
-        min-width: 1px;
-        min-height: 1px;
-    }
+	h1, #mail, #imgsect1, .card, #clientgroupe>figure>img, .carteprix, .infodyna>.infochiffre, .figPerso, .imgperso, #n6>figure>img, #infoPlus {
+		min-width: 1px;
+		min-height: 1px;
+	}
 
-    /* .top > p{
+	/* .top > p{
         width: 87%;
     } */
-    
-    /* section 1 */
 
-    header{
-        gap: 1.6vh;
-        padding-top: 10px;
-    }
+	/* section 1 */
 
-    header > span{
-        font-weight: 900;
-        font-size: larger;
-    }
+	header {
+		gap: 1.6vh;
+		padding-top: 10px;
+	}
 
-    .menu__btn{
-        visibility: visible;
-    }
+	header>span {
+		font-weight: 900;
+		font-size: larger;
+	}
 
-    #ulNav{
-        display: block;
-        position: fixed;
-        visibility: visible;
-        text-align: center;
-        top: 100%;
-        left: 0%;
+	.menu__btn {
+		visibility: visible;
+	}
 
-        width: 100%;
-        height: 100%;
+	#ulNav {
+		display: block;
+		position: fixed;
+		visibility: visible;
+		text-align: center;
+		top: 100%;
+		left: 0%;
 
-        margin: 0;
-        padding: 80px 0;
+		width: 100%;
+		height: 100%;
 
-        list-style: none;
+		margin: 0;
+		padding: 80px 0;
 
-        background-color: #ECEFF1;
-        box-shadow: 1px 0px 6px rgba(0, 0, 0, .2);
+		list-style: none;
 
-        transition-duration: .25s;
-    }
+		background-color: #ECEFF1;
+		box-shadow: 1px 0px 6px rgba(0, 0, 0, .2);
 
-    #ulNav > li{
-        width:  100vw;
-    }
+		transition-duration: .25s;
+	}
 
-    #ulNav > li > a{
-        text-align : center;
-        display: block;
-        padding: 12px 24px;
+	#ulNav>li {
+		width: 100vw;
+	}
 
-        color: #333;
+	#ulNav>li>a {
+		text-align: center;
+		display: block;
+		padding: 12px 24px;
 
-        font-family: 'Roboto', sans-serif;
-        font-size: 20px;
-        font-weight: 600;
+		color: #333;
 
-        text-decoration: none;
+		font-family: 'Roboto', sans-serif;
+		font-size: 20px;
+		font-weight: 600;
 
-        transition-duration: .25s;
-    }
+		text-decoration: none;
 
-    #principal{
-        margin-top: 16vh;
-        gap: 4vh;
-    }
+		transition-duration: .25s;
+	}
 
-    #weare{
-        gap: 15px;
-    }
+	#principal {
+		margin-top: 16vh;
+		gap: 4vh;
+	}
 
-    h1, #soush1, #mail{
-        width: 46vw;
-    }
+	#weare {
+		gap: 15px;
+	}
 
-    h1{
-        font-size: 24px;
-    }
+	h1, #soush1, #mail {
+		width: 46vw;
+	}
 
-    #soush1{
-        font-size: 14px;
-    }
+	h1 {
+		font-size: 24px;
+	}
 
-    #imgsect1{
-        height: 40vh;
-    }
+	#soush1 {
+		font-size: 14px;
+	}
 
-    /* section 2 */
+	#imgsect1 {
+		height: 40vh;
+	}
 
-    #n2{
-        padding-bottom: 5vh;
-    }
+	/* section 2 */
 
-    #n2 > .top > p{
-        width: 87vw;
-    }
+	#n2 {
+		padding-bottom: 5vh;
+	}
 
-    .card{
-        width: 80vw;
-        height: 60vh;
-    }
+	#n2>.top>p {
+		width: 87vw;
+	}
 
-    /* section 4 */
+	.card {
+		width: 80vw;
+		height: 60vh;
+	}
 
-    #n4 > .top > h2{
-        width: 70vw;
-    }
+	/* section 4 */
 
-    #n4 > .top > p{
-        width: 87%;
-    }
+	#n4>.top>h2 {
+		width: 70vw;
+	}
 
-    .infodyna{
-        gap: 80px;
-        padding-bottom: 5vh;
-    }
+	#n4>.top>p {
+		width: 87%;
+	}
 
-    #chiffre{
-        padding-bottom: 40px;
-    }
+	.infodyna {
+		gap: 80px;
+		padding-bottom: 5vh;
+	}
 
-    .figPerso , .infodyna > .infochiffre{
-        width: 35vw !important;
-    }
+	#chiffre {
+		padding-bottom: 40px;
+	}
 
-    .imgperso{
-        width: 35vw;
-    }
+	.figPerso, .infodyna>.infochiffre {
+		width: 35vw !important;
+	}
 
-    /* semi */
+	.imgperso {
+		width: 35vw;
+	}
 
-    #textpara > p{
-        width: 80vw;
-    }
+	/* semi */
 
-    /* section 5 */
+	#textpara>p {
+		width: 80vw;
+	}
 
-    #n5 > .top > p{
-        width: 87%;
-    }
+	/* section 5 */
 
-    #clientgroupe{
-        padding: 5vh 0;
-    }
+	#n5>.top>p {
+		width: 87%;
+	}
 
-    #clientgroupe > figure > img{
-        width: 50vw;
-    }
+	#clientgroupe {
+		padding: 5vh 0;
+	}
 
-    /* section 6 */
+	#clientgroupe>figure>img {
+		width: 50vw;
+	}
 
-    #n6{
-        padding: 5vh 0;
-        flex-wrap: wrap-reverse;
-    }
+	/* section 6 */
 
-    #left > p{
-        width: 80%;
-    }
+	#n6 {
+		padding: 5vh 0;
+		flex-wrap: wrap-reverse;
+	}
 
-    #infoPlus{
-        width: 30vw;
-    }
+	#left>p {
+		width: 80%;
+	}
 
-    #n6 > figure > img{
-        width: 80vw;
-    }
+	#infoPlus {
+		width: 30vw;
+	}
 
-    /* section 7 */
+	#n6>figure>img {
+		width: 80vw;
+	}
 
-    #n7 > .top{
-        padding-top: 6px;
-    }
+	/* section 7 */
 
-    #n7 > .top > p{
-        width: 87%;
-    }
+	#n7>.top {
+		padding-top: 6px;
+	}
 
-    #grpcartesprix{
-        padding-bottom: 5vh;
-    }
-    
-    .carteprix{
-        width: 80vw;
-        height: 90vh;
-    }
-    
-    #starter ,#advanced ,#professional{
-        margin-top: 0vh;
-    }
-    
-    .interieureCarte{
-        padding-top: 10px;
-        gap: 5vh;
-    }
-    
-    .prixmois{
-        height: 14vh;
-    }
-    
-    .currency{
-        font-size: 8.6vh;
-    }
+	#n7>.top>p {
+		width: 87%;
+	}
 
-    .prix{
-        font-size: 14vh;
-    }
+	#grpcartesprix {
+		padding-bottom: 5vh;
+	}
 
-    .parmois{
-        font-size: 2.4vh;
-    }
+	.carteprix {
+		width: 80vw;
+		height: 90vh;
+	}
 
-    .infolignes{
-        gap: 14vw;
-    }
+	#starter, #advanced, #professional {
+		margin-top: 0vh;
+	}
 
-    .typeinfo, .valueinfo{
-        width: 28vw;
-        gap: 3.36vh;
-        font-size: 4vh;
-    }
+	.interieureCarte {
+		padding-top: 10px;
+		gap: 5vh;
+	}
 
-    .interieureCarte > a{
-        width: 55vw;
-        padding: 1.8vh 0;
-    }
-    
-    /* section 8 */
+	.prixmois {
+		height: 14vh;
+	}
 
-    #n8 > .top > p{
-        width: 80vw;
-    }
+	.currency {
+		font-size: 8.6vh;
+	}
 
-    #grpBlog{
-        gap: 5vh;
-    }    
+	.prix {
+		font-size: 14vh;
+	}
 
-    .partBlog{
-        flex-basis: 100%;
-        max-width: 80%;
-    }
+	.parmois {
+		font-size: 2.4vh;
+	}
 
-    .paraBlog{
-        width: 80vw;
-    }
+	.infolignes {
+		gap: 14vw;
+	}
+
+	.typeinfo, .valueinfo {
+		width: 28vw;
+		gap: 3.36vh;
+		font-size: 4vh;
+	}
+
+	.interieureCarte>a {
+		width: 55vw;
+		padding: 1.8vh 0;
+	}
+
+	/* section 8 */
+
+	#n8>.top>p {
+		width: 80vw;
+	}
+
+	#grpBlog {
+		gap: 5vh;
+	}
+
+	.partBlog {
+		flex-basis: 100%;
+		max-width: 80%;
+	}
+
+	.paraBlog {
+		width: 80vw;
+	}
 
 }
