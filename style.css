@@ -9,8 +9,12 @@
 
 :root {
 	--primary: #1294b8;
-
+	--secondary: white;
+	--third: whitesmoke;
+	--bg1: radial-gradient(rgb(139, 195, 245), var(--primary));
 	--button: #3f8efd;
+	--btjs: gray;
+	--ombre: black;
 }
 
 .partie {
@@ -33,7 +37,7 @@
 .top>p {
 	font-size: 24px;
 	text-align: center;
-	color: gray;
+	color: var(--btjs);
 }
 
 
@@ -49,7 +53,7 @@
 
 
 #n1 {
-	background: radial-gradient(rgb(139, 195, 245), var(--primary));
+	background: var(--bg1);
 }
 
 
@@ -65,7 +69,7 @@ header {
 	gap: 16.7vw;
 	align-items: center;
 	padding-top: 40px;
-	color: white;
+	color: var(--secondary);
 }
 
 /* logo kucra */
@@ -129,7 +133,7 @@ header>span {
 	width: 100%;
 	height: 2px;
 
-	background-color: #616161;
+	background-color: var(--secondary);
 
 	transition-duration: .25s;
 }
@@ -162,7 +166,7 @@ header>span {
 
 #ulNav>li>a {
 	text-decoration: none;
-	color: white;
+	color: var(--secondary);
 	transition: all 0.2s;
 }
 
@@ -179,7 +183,7 @@ header>span {
 }
 
 #reseau>a>.fa-brands {
-	color: white;
+	color: var(--secondary);
 	font-size: larger;
 	transition: all 0.2s;
 }
@@ -250,7 +254,7 @@ form {
 	width: 6.25vw;
 	min-width: 120px;
 	background-color: var(--primary);
-	color: white;
+	color: var(--secondary);
 	border: 0;
 	transition: all 0.2s;
 }
@@ -315,9 +319,9 @@ form {
 	padding: 5%;
 	background: radial-gradient(rgb(139, 195, 245), var(--primary));
 	border-radius: 16px;
-	color: white;
+	color: var(--secondary);
 	transition: all 1s;
-	box-shadow: 0px 15px 140px -70px black;
+	box-shadow: 0px 15px 140px -70px var(--ombre);
 }
 
 .card:hover {
@@ -325,7 +329,7 @@ form {
 }
 
 .card>.fa-solid {
-	color: white;
+	color: var(--secondary);
 	font-size: 60px;
 }
 
@@ -355,7 +359,7 @@ form {
 	align-items: center;
 	justify-content: center;
 	gap: 160px;
-	background-color: whitesmoke;
+	background-color: var(--third);
 	;
 }
 
@@ -437,9 +441,9 @@ form {
 	width: 27px;
 	height: 27px;
 	font-size: 18px;
-	color: black;
+	color: var(--ombre);
 	left: -120px;
-	background-color: white;
+	background-color: var(--secondary);
 	border-radius: 50%;
 	display: flex;
 	justify-content: center;
@@ -455,9 +459,9 @@ form {
 	height: 2.8vh;
 	min-height: 20px;
 	font-size: 1.8vh;
-	color: black;
+	color: var(--ombre);
 	left: -120px;
-	background-color: white;
+	background-color: var(--secondary);
 	border-radius: 50%;
 	display: flex;
 	justify-content: center;
@@ -551,7 +555,7 @@ form {
 }
 
 #textpara>* {
-	color: white;
+	color: var(--secondary);
 }
 
 #textpara>h2, #textpara>p {
@@ -573,16 +577,16 @@ form {
 #getstart {
 	text-decoration: none;
 	font-size: 20px;
-	border: 1px solid white;
+	border: 1px solid var(--secondary);
 	border-radius: 4px;
 	padding: 14px 35px;
-	box-shadow: 0px 2px 6px black;
+	box-shadow: 0px 2px 6px var(--ombre);
 	transition: all .8s;
 }
 
 #getstart:hover {
-	background-color: white;
-	color: black;
+	background-color: var(--secondary);
+	color: var(--ombre);
 	transform: translateY(-10px);
 }
 
@@ -601,7 +605,7 @@ form {
 	display: flex;
 	flex-direction: column;
 	justify-content: space-around;
-	background-color: whitesmoke;
+	background-color: var(--third);
 	;
 }
 
@@ -677,7 +681,7 @@ form {
 
 #left>p {
 	font-size: 24px;
-	color: gray;
+	color: var(--btjs);
 	width: 40.6vw;
 }
 
@@ -696,12 +700,12 @@ form {
 
 .infon6 {
 	font-size: 24px;
-	color: gray;
+	color: var(--btjs);
 }
 
 #infoPlus {
 	background-color: var(--button);
-	color: white;
+	color: var(--secondary);
 	font-size: 26px;
 	width: 12.5vw;
 	min-width: 240px;
@@ -732,7 +736,7 @@ form {
 
 
 #n7 {
-	background-color: whitesmoke;
+	background-color: var(--third);
 }
 
 #n7>.top>p {
@@ -756,8 +760,8 @@ form {
 	height: 500px;
 	min-height: 46.3vh;
 	border-radius: 18px;
-	box-shadow: 0px 0px 40px -25px black;
-	background-color: white;
+	box-shadow: 0px 0px 40px -25px var(--ombre);
+	background-color: var(--secondary);
 }
 
 .interieureCarte {
@@ -795,7 +799,7 @@ form {
 }
 
 .parmois {
-	color: gray;
+	color: var(--btjs);
 	font-size: 0.9vh;
 	display: flex;
 	align-items: flex-end;
@@ -853,7 +857,7 @@ form {
 }
 
 #advanced>.interieureCarte>a {
-	color: white;
+	color: var(--secondary);
 	background-color: var(--button);
 }
 
@@ -870,7 +874,7 @@ form {
 	align-items: center;
 	text-align: center;
 	background-color: var(--button);
-	color: white;
+	color: var(--secondary);
 }
 
 
@@ -941,7 +945,7 @@ form {
 
 .paraBlog {
 	width: 20vw;
-	color: gray;
+	color: var(--btjs);
 	font-size: 16px;
 }
 
@@ -974,7 +978,7 @@ form {
 
 .imgPost:hover .infoPost {
 	backdrop-filter: brightness(40%);
-	color: white;
+	color: var(--secondary);
 }
 
 
@@ -1063,8 +1067,8 @@ footer>ul li:last-child {
 	bottom: 3vh;
 	right: 3vw;
 	border: none;
-	background-color: #3c3c3c;
-	color: white;
+	background-color: var(--btjs);
+	color: var(--secondary);
 	cursor: pointer;
 	border-radius: 50%;
 	width: 60px;
@@ -1099,8 +1103,8 @@ footer>ul li:last-child {
 	top: 10vh;
 	right: 0;
 	border: none;
-	background-color: #3c3c3c;
-	color: white;
+	background-color: var(--btjs);
+	color: var(--secondary);
 	cursor: pointer;
 	width: 60px;
 	height: 60px;
@@ -1118,6 +1122,6 @@ footer>ul li:last-child {
 	height: 75vh;
 	width: 90vw;
 	border-radius: 50px;
-	background-color: white;
+	background-color: var(--secondary);
 	z-index: 8;
 }
