@@ -1124,4 +1124,32 @@ footer>ul li:last-child {
 	border-radius: 50px;
 	background-color: var(--secondary);
 	z-index: 8;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 10vh;
+	border: solid 6px var(--ombre);
+}
+
+.btnColor {
+	height: 25vh;
+	width: 25vh;
+	border-radius: 50px;
+	color: white;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 4vh;
+	text-align: center;
+}
+
+#claire {
+	background-color: #1294b8;
+	border: solid #15596c 5px;
+}
+
+#sombre {
+	background-color: #2a2a2a;
+	border: solid #ababab 5px;
 }
