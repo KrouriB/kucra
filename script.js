@@ -1,14 +1,13 @@
-{/* récupérer le bouton*/}
 let mybutton = document.getElementById("myBtn");
+/* récupérer le bouton*/
 
-{/* toujours affichez le bouton */}
-{ window.onscroll = function() {mybutton.style.display = "block"}; }
-
-{/* a l'appui du bouton ,permet de remonter en haut de la page */}
 function topFunction() {
-    document.body.scrollTop = 0;
+	document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
-    }
+}
+/* a l'appui du bouton ,permet de remonter en haut de la page */
+
+// permet de naviguer sur la page via le menu burger en décochant le bouton et enlever le menu burger une fois qu'un lien est clicker
 
 var ulHeader = document.getElementById("ulNav");
 var menuToggle = document.getElementById("menu__toggle");
@@ -19,3 +18,14 @@ for(let i = 0 ; i < liHeader.length ;i++){
 	})
 }
 
+let colorswap = document.getElementById("colorswap");
+const para = document.createElement( "div" );
+const corps = document.body
+para.setAttribute("id","parabox");
+console.log(para);
+console.log(corps)
+function colorSettings() {
+	corps.appendChild(para);
+	corps.style.overflow = "hidden"
+	corps.style.height = "100%"
+}
