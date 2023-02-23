@@ -32,7 +32,7 @@ const themes = {
 		"--primary": "#2a2a2a",
 		"--secondary": "#3f8efd",
 		"--third": "#383838",
-		"--bg1": "radial-gradient(#808080, var(--primary))",
+		"--bg1": "radial-gradient(#4b4b4b, var(--primary))",
 		"--button": "black",
 		"--btjs": "lightgray",
 		"--ombre": "white",
@@ -40,36 +40,28 @@ const themes = {
 };
 
 let colorswap = document.getElementById("colorswap");
-const para = document.createElement( "div" );
 const corps = document.body
-para.setAttribute("id","parabox");
-const themeClaire = document.createElement( "div" );
-themeClaire.setAttribute("id","claire");
-themeClaire.classList.add("btnColor");
-themeClaire.innerText = "Thème Claire";
-themeClaire.dataset.theme="base";
-const themeSombre = document.createElement( "div" );
-themeSombre.setAttribute("id","sombre");
-themeSombre.classList.add("btnColor");
-themeSombre.innerText = "Thème Sombre";
-themeSombre.dataset.theme="dark";
-para.appendChild(themeClaire);
-para.appendChild(themeSombre);
+let settingbox = document.getElementById("themeBox");
 
 function colorSettings() {
-	corps.appendChild(para);
 	corps.style.overflow = "hidden";
 	corps.style.height = "100%";
+	settingbox.classList.remove("cacher");
+	settingbox.classList.add("parabox");
 }
 
-[...document.querySelectorAll('.btnColor')].forEach(el => {
-    el.addEventListener('click', () => {
-        const theme = themes[el.dataset.theme];
+const buttons = document.getElementsByClassName("btnColor");
+console.log(buttons);
+for (const button of buttons) {
+	button.addEventListener('click', () => {
+		console.log(button);
+        const theme = themes[button.dataset.theme];
         for (var variable in theme) {
             document.documentElement.style.setProperty(variable, theme[variable]);
-			corps.removeChild(para);
-			corps.style.overflow = "scroll";
+			settingbox.classList.remove("parabox");
+			settingbox.classList.add("cacher");
+			corps.style.overflow = "";
 			corps.style.height = "";
         };
     });
-});
+}
