@@ -133,7 +133,7 @@ header>span {
 	width: 100%;
 	height: 2px;
 
-	background-color: var(--secondary);
+	background-color: var(--ombre);
 
 	transition-duration: .25s;
 }
@@ -205,6 +205,7 @@ header>span {
 	align-items: center;
 	gap: 12.5vw;
 	margin-top: 11vh;
+	color: var(--ombre);
 }
 
 
@@ -288,6 +289,7 @@ form {
 	flex-direction: column;
 	gap: 120px;
 	padding-top: 80px;
+	background-color: var(--secondary);
 }
 
 #n2>.top>p {
@@ -317,7 +319,7 @@ form {
 	height: 40.8vh;
 	min-height: 440px;
 	padding: 5%;
-	background: radial-gradient(rgb(139, 195, 245), var(--primary));
+	background: var(--bg1);
 	border-radius: 16px;
 	color: var(--secondary);
 	transition: all 1s;
@@ -384,6 +386,7 @@ form {
 	flex-direction: column;
 	align-items: center;
 	gap: 36px;
+	background-color: var(--secondary);
 }
 
 #n4>.top>h2 {
@@ -454,7 +457,7 @@ form {
 .icores {
 	position: absolute;
 	z-index: 3;
-	width: 0.015625vw;
+	width: 2.8vh;
 	min-width: 20px;
 	height: 2.8vh;
 	min-height: 20px;
@@ -651,6 +654,7 @@ form {
 	align-content: center;
 	gap: 60px;
 	padding-top: 5vh;
+	background-color: var(--secondary);
 }
 
 
@@ -890,6 +894,10 @@ form {
 
 
 
+#n8{
+	background-color: var(--secondary);
+}
+
 #n8>.top>p {
 	width: 40.6vw;
 }
@@ -1115,7 +1123,7 @@ footer>ul li:last-child {
 	font-size: 30px;
 }
 
-#parabox {
+.parabox {
 	position: fixed;
 	top: 12.5vh;
 	left: 5vw;
@@ -1125,10 +1133,10 @@ footer>ul li:last-child {
 	background-color: var(--secondary);
 	z-index: 8;
 	display: flex;
-	flex-direction: column;
+	flex-direction: row;
 	justify-content: center;
 	align-items: center;
-	gap: 10vh;
+	gap: 30vw;
 	border: solid 6px var(--ombre);
 }
 
@@ -1152,4 +1160,8 @@ footer>ul li:last-child {
 #sombre {
 	background-color: #2a2a2a;
 	border: solid #ababab 5px;
+}
+
+.cacher{
+	display: none;
 }
