@@ -250,6 +250,13 @@
 		width: 80vw;
 	}
 
+	/* bouton theme */
+
+	.parabox{
+		gap:10vh;
+		flex-direction: column;
+	}
+
 }
 
 
