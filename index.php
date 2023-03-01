@@ -312,9 +312,8 @@ require_once('db-functions.php');
 				$display .= ($pricing['hidden_fees_pricing']) ? '<p>No</p>' : '<p>Yes</p>';
 				$display .= '</div></div><a href="#">Join Now</a></div></div>';
 				echo $display;
-
 			}
-
+			// TODO : regarder CSS pour aligner les 3 cartes 
 			?>
 		</div>
 	</section>
