@@ -865,7 +865,7 @@ form {
 	background-color: var(--button);
 }
 
-#reduc {
+.reduc {
 	position: absolute;
 	font-size: 19px;
 	right: 0;
