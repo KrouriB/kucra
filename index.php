@@ -1,3 +1,6 @@
+<?php
+require_once('db-functions.php');
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -271,6 +274,8 @@
 			<img src="img/creativity.png" alt="dessin autour du mot creativity écris de manière fantaisiste">
 		</figure>
 	</section>
+
+
 	<section class="partie" id="n7">
 		<div class="top">
 			<h2>Our Pricing</h2>
@@ -280,167 +285,41 @@
 			</p>
 		</div>
 		<div id="grpcartesprix">
-			<div class="carteprix" id="starter">
-				<div class="interieureCarte">
-					<h3>Starter</h3>
-					<div class="prixmois">
-						<p class="currency">$</p>
-						<p class="prix">9</p>
-						<p class="parmois">/mouth</p>
-					</div>
-					<div class="infolignes">
-						<div class="typeinfo">
-							<p>
-								<i class="fa-regular fa-circle-check"></i>
-								Bandwidth
-							</p>
-							<p>
-								<i class="fa-regular fa-circle-check"></i>
-								Onlinespace
-							</p>
-							<p>
-								<i class="fa-regular fa-circle-xmark"></i>
-								Support
-							</p>
-							<p>
-								<i class="fa-regular fa-circle-check"></i>
-								Domain
-							</p>
-							<p>
-								<i class="fa-regular fa-circle-xmark"></i>
-								Hidden Fees
-							</p>
-						</div>
-						<div class="valueinfo">
-							<p>
-								1GB
-							</p>
-							<p>
-								500MB
-							</p>
-							<p>
-								No
-							</p>
-							<p>
-								1
-							</p>
-							<p>
-								No
-							</p>
-						</div>
-					</div>
-					<a href="#">Join Now</a>
-				</div>
-			</div>
-			<div class="carteprix" id="advanced">
-				<p id="reduc">
-					20% Sale
-				</p>
-				<div class="interieureCarte">
-					<h3>Advanced</h3>
-					<div class="prixmois">
-						<p class="currency">$</p>
-						<p class="prix">19</p>
-						<p class="parmois">/mouth</p>
-					</div>
-					<div class="infolignes">
-						<div class="typeinfo">
-							<p>
-								<i class="fa-regular fa-circle-check"></i>
-								Bandwidth
-							</p>
-							<p>
-								<i class="fa-regular fa-circle-check"></i>
-								Onlinespace
-							</p>
-							<p>
-								<i class="fa-regular fa-circle-check"></i>
-								Support
-							</p>
-							<p>
-								<i class="fa-regular fa-circle-check"></i>
-								Domain
-							</p>
-							<p>
-								<i class="fa-regular fa-circle-check"></i>
-								Hidden Fees
-							</p>
-						</div>
-						<div class="valueinfo">
-							<p>
-								2GB
-							</p>
-							<p>
-								1GB
-							</p>
-							<p>
-								Yes
-							</p>
-							<p>
-								3
-							</p>
-							<p>
-								Yes
-							</p>
-						</div>
-					</div>
-					<a href="#">Join Now</a>
-				</div>
-			</div>
-			<div class="carteprix" id="professional">
-				<div class="interieureCarte">
-					<h3>Professional</h3>
-					<div class="prixmois">
-						<p class="currency">$</p>
-						<p class="prix">29</p>
-						<p class="parmois">/mouth</p>
-					</div>
-					<div class="infolignes">
-						<div class="typeinfo">
-							<p>
-								<i class="fa-regular fa-circle-check"></i>
-								Bandwidth
-							</p>
-							<p>
-								<i class="fa-regular fa-circle-check"></i>
-								Onlinespace
-							</p>
-							<p>
-								<i class="fa-regular fa-circle-check"></i>
-								Support
-							</p>
-							<p>
-								<i class="fa-regular fa-circle-check"></i>
-								Domain
-							</p>
-							<p>
-								<i class="fa-regular fa-circle-check"></i>
-								Hidden Fees
-							</p>
-						</div>
-						<div class="valueinfo">
-							<p>
-								3GB
-							</p>
-							<p>
-								2GB
-							</p>
-							<p>
-								Yes
-							</p>
-							<p>
-								Unlimited
-							</p>
-							<p>
-								Yes
-							</p>
-						</div>
-					</div>
-					<a href="#">Join Now</a>
-				</div>
-			</div>
+		<?php
+			$allPricing = 'SELECT * FROM pricing';
+			$pricings = findAll($allPricing);
+			foreach ($pricings as $pricing){
+				$sup_circle = ($pricing['support_pricing']) ? 'xmark' : 'check' ;
+				$h_f_circle = ($pricing['hidden_fees_pricing']) ? 'xmark' : 'check' ;
+				$display = '';
+				$display .= '<div class="carteprix" id="'.strtolower($pricing['nom_pricing']).'">';
+				if ($pricing['pourcentage_reduction_pricing']!= 0){
+					$display .= '<p class="reduc">'.$pricing['pourcentage_reduction_pricing'].'% Sale</p>';
+				}
+				$display .= '<div class="interieureCarte"><h3>'.$pricing['nom_pricing'].'</h3>';
+				$display .= '<div class="prixmois"><p class="currency">$</p><p class="prix">'.round($pricing['prix_pricing']).'</p><p class="parmois">/mouth</p></div>';
+				$display .= '<div class="infolignes"><div class="typeinfo">';
+				$display .= '<p><i class="fa-regular fa-circle-check"></i>Bandwidth</p>';
+				$display .= '<p><i class="fa-regular fa-circle-check"></i>Onlinespace</p>';
+				$display .='<p><i class="fa-regular fa-circle-'.$sup_circle.'"></i>Support</p>';
+				$display .= '<p><i class="fa-regular fa-circle-check"></i>Domain</p>';
+				$display .= '<p><i class="fa-regular fa-circle-'.$h_f_circle.'"></i>Hidden Fees</p>';
+				$display .= '</div><div class="valueinfo">';
+				$display .= '<p>'.$pricing['bandwitdh_pricing'].'GB</p>';
+				$display .= ($pricing['onlinespace_pricing'] > 999) ? '<p>'.($pricing['onlinespace_pricing']/1000).'GB</p>' : '<p>'.$pricing['onlinespace_pricing'].'MB</p>';
+				$display .= ($pricing['support_pricing']) ? '<p>No</p>' : '<p>Yes</p>';
+				$display .= ($pricing['domain_pricing'] < 0) ? '<p>Unlimited</p>' : '<p>'.$pricing['domain_pricing'].'</p>';
+				$display .= ($pricing['hidden_fees_pricing']) ? '<p>No</p>' : '<p>Yes</p>';
+				$display .= '</div></div><a href="#">Join Now</a></div></div>';
+				echo $display;
+
+			}
+
+			?>
 		</div>
 	</section>
+
+
 	<section class="partie" id="n8">
 		<div class="top">
 			<h2>Our Blog</h2>
