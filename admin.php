@@ -20,7 +20,7 @@ require_once('db-functions.php');
         <h2>Update Princing</h2>
         <div id="adminprix">
             <?php
-            $allPricing = 'SELECT * FROM pricing';
+            $allPricing = selectAllPricing();
 			$pricings = findAll($allPricing);
 			foreach ($pricings as $pricing){
 				$display = '';

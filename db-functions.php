@@ -22,3 +22,17 @@ function findAll($query){
     $tableau = $tableauStatement->fetchAll();
     return $tableau;
 }
+
+function selectAllPricing(){
+    $query = 'SELECT * FROM pricing';
+    return $query;
+}
+
+function selectPricing(string $column){
+    $query = 'SELECT $column FROM pricing';
+    return $query;
+}
+
+
+
+?>
