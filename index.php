@@ -36,6 +36,7 @@ require_once('db-functions.php');
 					<li><a href="#n4">ABOUT</a></li>
 					<li><a href="#n8">BLOG</a></li>
 					<li><a href="#pieddepage">CONTACT</a></li>
+					<li><a href="admin.php">ADMIN</a></li>
 				</ul>
 			</div>
 			<div id="reseau">
