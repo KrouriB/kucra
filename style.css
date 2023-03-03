@@ -846,11 +846,11 @@ form {
 
 /* pack starter + professional */
 
-#starter, #professional {
+#starter, #proffessional {
 	margin-top: 11vh;
 }
 
-#starter>.interieureCarte>a, #professional>.interieureCarte>a {
+#starter>.interieureCarte>a, #proffessional>.interieureCarte>a {
 	color: var(--button);
 }
 
