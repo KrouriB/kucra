@@ -3,8 +3,7 @@
 	padding: 0;
 	box-sizing: border-box;
 	font-family: 'Poppins', sans-serif;
-	scroll-behavior: smooth;
-	/* prochaine fois faire un wrapper car ne marche pas sur le body  */
+	scroll-behavior: smooth; /* prochaine fois faire un wrapper car scroll-behavior ne marche pas sur le body  */
 }
 
 :root {
