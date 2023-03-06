@@ -66,7 +66,7 @@ header {
 	display: flex;
 	flex-direction: row;
 	justify-content: center;
-	gap: 16.7vw;
+	gap: 14vw;
 	align-items: center;
 	padding-top: 40px;
 	color: var(--secondary);
@@ -846,21 +846,21 @@ form {
 
 /* pack starter + professional */
 
-#starter, #proffessional {
+#pack1, #pack3 {
 	margin-top: 11vh;
 }
 
-#starter>.interieureCarte>a, #proffessional>.interieureCarte>a {
+#pack1>.interieureCarte>a, #pack3>.interieureCarte>a {
 	color: var(--button);
 }
 
 /* pack advanced */
 
-#advanced {
+#pack2 {
 	margin-top: 5.5vh;
 }
 
-#advanced>.interieureCarte>a {
+#pack2>.interieureCarte>a {
 	color: var(--secondary);
 	background-color: var(--button);
 }

@@ -60,8 +60,7 @@ require_once('db-functions.php');
 				</form>
 			</article>
 			<figure id="fimgsect1">
-				<img id="imgsect1" src="img/illustration.svg"
-					alt="dessin décorative d'ecran dont un chat se trouve dessus,avec une fenetre ouverte et une souris intéragissant avec.">
+				<img id="imgsect1" src="img/illustration.svg" alt="dessin décorative d'ecran dont un chat se trouve dessus,avec une fenetre ouverte et une souris intéragissant avec.">
 			</figure>
 		</section>
 	</section>
@@ -287,34 +286,33 @@ require_once('db-functions.php');
 		</div>
 		<div id="grpcartesprix">
 			<?php
-				$allPricing = selectAllPricing();
-				$pricings = findAll($allPricing);
-				foreach ($pricings as $pricing){
-					$sup_circle = ($pricing['support_pricing']) ? 'xmark' : 'check' ;
-					$h_f_circle = ($pricing['hidden_fees_pricing']) ? 'xmark' : 'check' ;
-					$display = '';
-					$display .= '<div class="carteprix" id="'.strtolower($pricing['nom_pricing']).'">';
-					if ($pricing['pourcentage_reduction_pricing']!= 0){
-						$display .= '<p class="reduc">'.$pricing['pourcentage_reduction_pricing'].'% Sale</p>';
-					}
-					$display .= '<div class="interieureCarte"><h3>'.$pricing['nom_pricing'].'</h3>';
-					$display .= '<div class="prixmois"><p class="currency">$</p><p class="prix">'.round($pricing['prix_pricing']).'</p><p class="parmois">/mouth</p></div>';
-					$display .= '<div class="infolignes"><div class="typeinfo">';
-					$display .= '<p><i class="fa-regular fa-circle-check"></i>Bandwidth</p>';
-					$display .= '<p><i class="fa-regular fa-circle-check"></i>Onlinespace</p>';
-					$display .='<p><i class="fa-regular fa-circle-'.$sup_circle.'"></i>Support</p>';
-					$display .= '<p><i class="fa-regular fa-circle-check"></i>Domain</p>';
-					$display .= '<p><i class="fa-regular fa-circle-'.$h_f_circle.'"></i>Hidden Fees</p>';
-					$display .= '</div><div class="valueinfo">';
-					$display .= '<p>'.$pricing['bandwitdh_pricing'].'GB</p>';
-					$display .= ($pricing['onlinespace_pricing'] > 999) ? '<p>'.($pricing['onlinespace_pricing']/1000).'GB</p>' : '<p>'.$pricing['onlinespace_pricing'].'MB</p>';
-					$display .= ($pricing['support_pricing']) ? '<p>No</p>' : '<p>Yes</p>';
-					$display .= ($pricing['domain_pricing'] < 0) ? '<p>Unlimited</p>' : '<p>'.$pricing['domain_pricing'].'</p>';
-					$display .= ($pricing['hidden_fees_pricing']) ? '<p>No</p>' : '<p>Yes</p>';
-					$display .= '</div></div><a href="#">Join Now</a></div></div>';
-					echo $display;
+			$allPricing = selectAllPricing();
+			$pricings = findAll($allPricing);
+			foreach ($pricings as $pricing) {
+				$sup_circle = ($pricing['support_pricing']) ? 'xmark' : 'check';
+				$h_f_circle = ($pricing['hidden_fees_pricing']) ? 'xmark' : 'check';
+				$display = '';
+				$display .= '<div class="carteprix" id="pack' . $pricing['id_pricing'] . '">';
+				if ($pricing['pourcentage_reduction_pricing'] != 0) {
+					$display .= '<p class="reduc">' . $pricing['pourcentage_reduction_pricing'] . '% Sale</p>';
 				}
-				// TODO : regarder CSS pour aligner les 3 cartes 
+				$display .= '<div class="interieureCarte"><h3>' . $pricing['nom_pricing'] . '</h3>';
+				$display .= '<div class="prixmois"><p class="currency">$</p><p class="prix">' . round($pricing['prix_pricing']) . '</p><p class="parmois">/mouth</p></div>';
+				$display .= '<div class="infolignes"><div class="typeinfo">';
+				$display .= '<p><i class="fa-regular fa-circle-check"></i>Bandwidth</p>';
+				$display .= '<p><i class="fa-regular fa-circle-check"></i>Onlinespace</p>';
+				$display .= '<p><i class="fa-regular fa-circle-' . $sup_circle . '"></i>Support</p>';
+				$display .= '<p><i class="fa-regular fa-circle-check"></i>Domain</p>';
+				$display .= '<p><i class="fa-regular fa-circle-' . $h_f_circle . '"></i>Hidden Fees</p>';
+				$display .= '</div><div class="valueinfo">';
+				$display .= '<p>' . $pricing['bandwidth_pricing'] . 'GB</p>';
+				$display .= ($pricing['onlinespace_pricing'] > 999) ? '<p>' . ($pricing['onlinespace_pricing'] / 1000) . 'GB</p>' : '<p>' . $pricing['onlinespace_pricing'] . 'MB</p>';
+				$display .= ($pricing['support_pricing']) ? '<p>No</p>' : '<p>Yes</p>';
+				$display .= ($pricing['domain_pricing'] < 0) ? '<p>Unlimited</p>' : '<p>' . $pricing['domain_pricing'] . '</p>';
+				$display .= ($pricing['hidden_fees_pricing']) ? '<p>No</p>' : '<p>Yes</p>';
+				$display .= '</div></div><a href="#">Join Now</a></div></div>';
+				echo $display;
+			}
 			?>
 		</div>
 	</section>
@@ -356,8 +354,7 @@ require_once('db-functions.php');
 			<article class="partBlog" id="blog2nd">
 				<div class="imgPost">
 					<figure class="figBlog">
-						<img src="img/blog2.png"
-							alt="dame en tailleur sur son lit travaillat sur sn pc ,livre a la main">
+						<img src="img/blog2.png" alt="dame en tailleur sur son lit travaillat sur sn pc ,livre a la main">
 					</figure>
 					<div class="infoPost">
 						<p class="nomGras">
