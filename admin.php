@@ -27,25 +27,33 @@ require_once('db-functions.php');
                 <div class="carteModif" id="carte<?=$pricing['id_pricing']?>">
                     <form class="formCarte" id="form<?=$pricing['id_pricing']?>">
                         <div class="uneModif">
-                            <label for="">Name :</label>
-                            <input type="text" name="" value="<?=$pricing['nom_pricing']?>">
+                            <label for="name">Name :</label>
+                            <input type="text" name="namesale" value="<?=$pricing['nom_pricing']?>">
                         </div>
                         <div class="uneModif">
-                            <label for="">Sale :</label>
-                            <input type="number" name="" value="<?=$pricing['pourcentage_reduction_pricing']?>">
+                            <label for="price">Price :</label>
+                            <input type="number" name="price" value="<?=$pricing['prix_pricing']?>">
                         </div>
                         <div class="uneModif">
-                            <label for="">Onlinespace :</label>
-                            <input type="number" name="" value="<?=$pricing['onlinespace_pricing']?>">
+                            <label for="sale">Sale :</label>
+                            <input type="number" name="sale" value="<?=$pricing['pourcentage_reduction_pricing']?>">
+                        </div>
+                        <div class="uneModif">
+                            <label for="bandwidth">Bandwidth :</label>
+                            <input type="number" name="bandwidth" value="<?=$pricing['bandwidth_pricing']?>'">
+                        </div>
+                        <div class="uneModif">
+                            <label for="onlinespace">Onlinespace :</label>
+                            <input type="number" name="onlinespace" value="<?=$pricing['onlinespace_pricing']?>">
                         </div>
                         <div class="uneModif">
                             <label>Support :</label>
                             <div class="radioHori">
                                 <?php echo ($pricing['support_pricing']) ?
-                                    '<div> <input type="radio" name="" id="sup_false" checked> <label for="sup_false">No</label> </div>' .
-                                    '<div> <input type="radio" name="" id="sup_true"> <label for="sup_true">Yes</label> </div>' :
-                                    '<div> <input type="radio" name="" id="sup_false"> <label for="sup_false">No</label> </div>' .
-                                    '<div> <input type="radio" name="" id="sup_true" checked> <label for="sup_true">Yes</label> </div>' ; ?>
+                                    '<div> <input type="radio" name="sup_false" id="sup_false" checked> <label for="sup_false">No</label> </div>' .
+                                    '<div> <input type="radio" name="sup_true" id="sup_true"> <label for="sup_true">Yes</label> </div>' :
+                                    '<div> <input type="radio" name="sup_false" id="sup_false"> <label for="sup_false">No</label> </div>' .
+                                    '<div> <input type="radio" name="sup_true" id="sup_true" checked> <label for="sup_true">Yes</label> </div>' ; ?>
                             </div>
                         </div>
                         <div class="uneModif">
