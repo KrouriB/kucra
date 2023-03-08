@@ -23,22 +23,49 @@ require_once('db-functions.php');
             <?php
             $allPricing = selectAllPricing();
             $pricings = findAll($allPricing);
-            foreach ($pricings as $pricing) {
-                $display = '';
-                $display .= '<div class="carteModif" id="carte' . $pricing['id_pricing'] . '"><form class="formCarte" id="form' . $pricing['id_pricing'] . '">';
-                $display .= '<div class="uneModif"><label>Name :</label><input type="text" value="' . $pricing['nom_pricing'] . '"></div>';
-                $display .= '<div class="uneModif"><label>Price :</label><input type="number" value="' . $pricing['prix_pricing'] . '"></div>';
-                $display .= '<div class="uneModif"><label>Sale :</label><input type="number" value="' . $pricing['pourcentage_reduction_pricing'] . '"></div>';
-                $display .= '<div class="uneModif"><label>Bandwidth :</label><input type="number" value="' . $pricing['bandwidth_pricing'] . '"></div>';
-                $display .= '<div class="uneModif"><label>Onlinespace :</label><input type="number" value="' . $pricing['onlinespace_pricing'] . '"></div>';
-                $display .= '<div class="uneModif"><label>Support :</label><div class="radioHori">';
-                $display .= ($pricing['support_pricing']) ? '<div><input type="radio" id="sup_false" checked><label for="sup_false">No</label></div><div><input type="radio" id="sup_true"><label for="sup_true">Yes</label></div></div>' : '<div><input type="radio" id="sup_false"><label for="sup_false">No</label></div><div><input type="radio" id="sup_true" checked><label for="sup_true">Yes</label></div></div>';
-                $display .= '</div><div class="uneModif"><label>Domain :</label><input type="number" value="' . $pricing['domain_pricing'] . '"></div>';
-                $display .= '<div class="uneModif"><label>Hidden Fees :</label><div class="radioHori">';
-                $display .= ($pricing['hidden_fees_pricing']) ? '<div><input type="radio" id="h_f_false" checked><label for"h_f_false">No</label></div><div><input type="radio" id="h_f_true"><label for"h_f_true">Yes</label></div></div>' : '<div><input type="radio" id="h_f_false"><label for"h_f_false">No</label></div><div><input type="radio" id="h_f_true" checked><label for"h_f_true">Yes</label></div></div>';
-                $display .= '</div><input type="submit" class="submitBtn" value="Update">';
-                $display .= '</form></div>';
-                echo $display;
+            foreach ($pricings as $pricing) {?>
+                <div class="carteModif" id="carte<?=$pricing['id_pricing']?>">
+                    <form class="formCarte" id="form<?=$pricing['id_pricing']?>">
+                        <div class="uneModif">
+                            <label for="">Name :</label>
+                            <input type="text" name="" value="<?=$pricing['nom_pricing']?>">
+                        </div>
+                        <div class="uneModif">
+                            <label for="">Sale :</label>
+                            <input type="number" name="" value="<?=$pricing['pourcentage_reduction_pricing']?>">
+                        </div>
+                        <div class="uneModif">
+                            <label for="">Onlinespace :</label>
+                            <input type="number" name="" value="<?=$pricing['onlinespace_pricing']?>">
+                        </div>
+                        <div class="uneModif">
+                            <label>Support :</label>
+                            <div class="radioHori">
+                                <?php echo ($pricing['support_pricing']) ?
+                                    '<div> <input type="radio" name="" id="sup_false" checked> <label for="sup_false">No</label> </div>' .
+                                    '<div> <input type="radio" name="" id="sup_true"> <label for="sup_true">Yes</label> </div>' :
+                                    '<div> <input type="radio" name="" id="sup_false"> <label for="sup_false">No</label> </div>' .
+                                    '<div> <input type="radio" name="" id="sup_true" checked> <label for="sup_true">Yes</label> </div>' ; ?>
+                            </div>
+                        </div>
+                        <div class="uneModif">
+                            <label for="">Domain :</label>
+                            <input type="number" name="" value="<?=$pricing['domain_pricing']?>">
+                        </div>
+                        <div class="uneModif">
+                            <label>Hidden Fees :</label>
+                            <div class="radioHori">
+                                <?php echo ($pricing['hidden_fees_pricing']) ?
+                                    '<div> <input type="radio" name="" id="h_f_false" checked> <label for"h_f_false">No</label> </div>' .
+                                    '<div> <input type="radio" name="" id="h_f_true"> <label for"h_f_true">Yes</label> </div>' :
+                                    '<div> <input type="radio" name="" id="h_f_false"> <label for"h_f_false">No</label> </div>' .
+                                    '<div> <input type="radio" name="" id="h_f_true" checked> <label for"h_f_true">Yes</label> </div>' ; ?>
+                            </div>
+                        </div>
+                        <input type="submit" class="submitBtn" name="submit<?=$pricing['id_pricing']?>" value="Update">
+                    </form>
+                </div>
+            <?php
             }
             ?>
         </div>
