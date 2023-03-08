@@ -13,7 +13,7 @@ require_once('db-functions.php');
         $pricings = findAll($allPricing);
         foreach ($pricings as $pricing) {?>
             <div class="carteModif" id="carte<?=$pricing['id_pricing']?>">
-                <!-- <form  action="fonction.php?acion=update&id=<?=/*$pricing['id_pricing']*/?>" methode="post" class="formCarte" id="form<?=/*$pricing['id_pricing']*/?>"> -->
+                <!-- <form  action="traitemant.php?acion=update&id=<?=/*$pricing['id_pricing']*/?>" methode="post" class="formCarte" id="form<?=/*$pricing['id_pricing']*/?>"> -->
                 <form class="formCarte" id="form<?=$pricing['id_pricing']?>">
                     <div class="uneModif">
                         <label for="name">Name :</label>
