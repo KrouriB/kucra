@@ -33,6 +33,18 @@ function selectPricing(string $column){
     return $query;
 }
 
+// function update(array $table){
+//     $query = "UPDATE pricing
+//                 SET $table['nom_pricing'] = $_SESSION['pricing'][$_GET['id']]['name'],
+//                     $table['prix_pricing'] =  $_SESSION['pricing'][$_GET['id']]['price'] ,
+//                     $table['pourcentage_reduction_pricing'] =  $_SESSION['pricing'][$_GET['id']]['sale'] ,
+//                     $table['bandwidth_pricing'] =  $_SESSION['pricing'][$_GET['id']]['bandwidth'] ,
+//                     $table['onlinespace_pricing'] =  $_SESSION['pricing'][$_GET['id']]['onlinespace'] ,
+//                     $table['support_pricing'] =  $_SESSION['pricing'][$_GET['id']]['support'] ,
+//                     $table['domain_pricing'] =  $_SESSION['pricing'][$_GET['id']]['domain'] ,
+//                     $table['hidden_fees_pricing'] =  $_SESSION['pricing'][$_GET['id']]['hidden_fees']";
+//     return $query;
+// }
 
 
 ?>
