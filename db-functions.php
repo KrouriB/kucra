@@ -28,23 +28,34 @@ function selectAllPricing(){
     return $query;
 }
 
-function selectPricing(string $column){
-    $query = 'SELECT $column FROM pricing';
-    return $query;
-}
 
-// function update(array $table){
-//     $query = "UPDATE pricing
-//                 SET $table['nom_pricing'] = $_SESSION['pricing'][$_GET['id']]['name'],
-//                     $table['prix_pricing'] =  $_SESSION['pricing'][$_GET['id']]['price'] ,
-//                     $table['pourcentage_reduction_pricing'] =  $_SESSION['pricing'][$_GET['id']]['sale'] ,
-//                     $table['bandwidth_pricing'] =  $_SESSION['pricing'][$_GET['id']]['bandwidth'] ,
-//                     $table['onlinespace_pricing'] =  $_SESSION['pricing'][$_GET['id']]['onlinespace'] ,
-//                     $table['support_pricing'] =  $_SESSION['pricing'][$_GET['id']]['support'] ,
-//                     $table['domain_pricing'] =  $_SESSION['pricing'][$_GET['id']]['domain'] ,
-//                     $table['hidden_fees_pricing'] =  $_SESSION['pricing'][$_GET['id']]['hidden_fees']";
-//     return $query;
-// }
+
+
+
+function updateFunction($name,$price,$sale,$bandwidth,$onlinespace,$support,$domain,$hidden_fees){
+    $query =   'UPDATE pricing
+                SET nom_pricing = :name,
+                    prix_pricing = :price,
+                    pourcentage_reduction_pricing = :sale,
+                    bandwidth_pricing = :bandwidth,
+                    onlinespace_pricing = :onlinespace:,
+                    support_pricing = :support,
+                    domain_pricing = :domain,
+                    hidden_fees_pricing = :hidden_fees
+                WHERE id_pricing = :id';
+    $elementStatement = connexion()->prepare($query);
+    $elementStatement->execute([
+        "name" => $name,
+        "price" => $price,
+        "sale" => $sale,
+        "bandwidth" => $bandwidth,
+        "onlinespace" => $onlinespace,
+        "support" => $support,
+        "domain" => $domain,
+        "hidden_fees" => $name,
+        "id" => $_GET['id'],
+    ]);
+}
 
 
 ?>
