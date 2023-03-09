@@ -16,6 +16,17 @@
 CREATE DATABASE IF NOT EXISTS `landing_page_brice` /*!40100 DEFAULT CHARACTER SET latin1 */;
 USE `landing_page_brice`;
 
+-- Listage de la structure de la table landing_page_brice. email
+CREATE TABLE IF NOT EXISTS `email` (
+  `id_email` int(11) NOT NULL AUTO_INCREMENT,
+  `adresse_email` varchar(50) NOT NULL,
+  PRIMARY KEY (`id_email`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- Listage des données de la table landing_page_brice.email : ~0 rows (environ)
+/*!40000 ALTER TABLE `email` DISABLE KEYS */;
+/*!40000 ALTER TABLE `email` ENABLE KEYS */;
+
 -- Listage de la structure de la table landing_page_brice. pricing
 CREATE TABLE IF NOT EXISTS `pricing` (
   `id_pricing` int(11) NOT NULL AUTO_INCREMENT,
@@ -27,15 +38,16 @@ CREATE TABLE IF NOT EXISTS `pricing` (
   `support_pricing` tinyint(4) NOT NULL,
   `domain_pricing` int(11) NOT NULL,
   `hidden_fees_pricing` tinyint(4) NOT NULL,
+  `compte_pricing` int(11) NOT NULL,
   PRIMARY KEY (`id_pricing`)
 ) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
 
 -- Listage des données de la table landing_page_brice.pricing : ~3 rows (environ)
 /*!40000 ALTER TABLE `pricing` DISABLE KEYS */;
-INSERT INTO `pricing` (`id_pricing`, `nom_pricing`, `prix_pricing`, `pourcentage_reduction_pricing`, `bandwidth_pricing`, `onlinespace_pricing`, `support_pricing`, `domain_pricing`, `hidden_fees_pricing`) VALUES
-	(1, 'Starter', 9, 0, 1, 500, 0, 1, 0),
-	(2, 'Advanced', 19, 20, 2, 1000, 1, 3, 1),
-	(3, 'Professional', 29, 0, 3, 2000, 1, -1, 1);
+INSERT INTO `pricing` (`id_pricing`, `nom_pricing`, `prix_pricing`, `pourcentage_reduction_pricing`, `bandwidth_pricing`, `onlinespace_pricing`, `support_pricing`, `domain_pricing`, `hidden_fees_pricing`, `compte_pricing`) VALUES
+	(1, 'Starter', 9, 0, 1, 500, 1, 1, 1, 12),
+	(2, 'Advanced', 19, 20, 2, 1000, 0, 3, 0, 7),
+	(3, 'Professional', 29, 0, 3, 2000, 0, -1, 0, 4);
 /*!40000 ALTER TABLE `pricing` ENABLE KEYS */;
 
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
