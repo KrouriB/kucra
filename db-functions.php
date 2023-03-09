@@ -61,6 +61,13 @@ function addCompte($id){
     $elementStatement->execute(["id" => $id]);
 }
 
+function ajoutEmail($email){
+    $query =   'INSERT INTO email (adresse_email)
+                VALUES (:email)';
+    $elementStatement = connexion()->prepare($query);
+    $elementStatement->execute(["email" => $email]);
+}
+
 function getMessages(){
     if(isset( $_SESSION["message"])&& !empty( $_SESSION["message"])){
         $html = "<div id='message'><p>". $_SESSION["message"]."</p></div>";
