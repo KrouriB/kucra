@@ -39,8 +39,8 @@ require_once('db-functions.php');
 				Carefully crafted after analysing the needs of different industries and the design achieves a great
 				balance between purpose & presentation
 			</p>
-			<form id="infomail">
-				<input type="text" placeholder="Entrez votre email" id="mail">
+			<form action="traitemant.php?action=subscribe" method="post" id="infomail">
+				<input type="email" placeholder="Entrez votre email" id="mail">
 				<input type="submit" value="SUBSCRIBE" id="button">
 			</form>
 		</article>
