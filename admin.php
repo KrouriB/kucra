@@ -1,7 +1,6 @@
 <?php
 session_start();
 ob_start();
-// require "fonction.php";
 require_once('db-functions.php');
 ?>
 
@@ -66,6 +65,7 @@ require_once('db-functions.php');
         }
         ?>
     </div>
+    <a href="index.php" id="retourAdmin">Retour</a>
 </section>
 
 <?php
