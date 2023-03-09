@@ -20,9 +20,16 @@ if(isset($_GET['action'])){
                     updateFunction($name,$price,$sale,$bandwidth,$onlinespace,$support,$domain,$hidden_fees,$_GET['id']);
                 }
             }
-            break;
+            header("Location:admin.php");
+            die;
         case "add":
-            // if(isset($_GET['id']) && )
+            if(isset($_GET['id'])){
+                $pricings = findAll(selectAllPricing());
+                addCompte($_GET['id']);
+                $_SESSION['message'] = "Un abonnement ".$pricings[$_GET['id']]['nom_pricing']." a bien été ajouté" ;
+                header("Location:index.php#n7");
+                die();
+            }
     }
 }
 header("Location:index.php");
