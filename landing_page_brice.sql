@@ -1,8 +1,8 @@
 -- --------------------------------------------------------
 -- Hôte :                        127.0.0.1
--- Version du serveur:           8.0.30 - MySQL Community Server - GPL
+-- Version du serveur:           5.7.24 - MySQL Community Server (GPL)
 -- SE du serveur:                Win64
--- HeidiSQL Version:             11.0.0.5919
+-- HeidiSQL Version:             10.2.0.5599
 -- --------------------------------------------------------
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
@@ -13,22 +13,22 @@
 
 
 -- Listage de la structure de la base pour landing_page_brice
-CREATE DATABASE IF NOT EXISTS `landing_page_brice` /*!40100 DEFAULT CHARACTER SET utf8mb3 COLLATE utf8mb3_bin */ /*!80016 DEFAULT ENCRYPTION='N' */;
+CREATE DATABASE IF NOT EXISTS `landing_page_brice` /*!40100 DEFAULT CHARACTER SET latin1 */;
 USE `landing_page_brice`;
 
 -- Listage de la structure de la table landing_page_brice. pricing
 CREATE TABLE IF NOT EXISTS `pricing` (
-  `id_pricing` int NOT NULL AUTO_INCREMENT,
+  `id_pricing` int(11) NOT NULL AUTO_INCREMENT,
   `nom_pricing` varchar(50) NOT NULL,
   `prix_pricing` float NOT NULL,
-  `pourcentage_reduction_pricing` int NOT NULL,
-  `bandwidth_pricing` int NOT NULL,
-  `onlinespace_pricing` int NOT NULL,
-  `support_pricing` tinyint NOT NULL,
-  `domain_pricing` int NOT NULL,
-  `hidden_fees_pricing` tinyint NOT NULL,
+  `pourcentage_reduction_pricing` int(11) NOT NULL,
+  `bandwidth_pricing` int(11) NOT NULL,
+  `onlinespace_pricing` int(11) NOT NULL,
+  `support_pricing` tinyint(4) NOT NULL,
+  `domain_pricing` int(11) NOT NULL,
+  `hidden_fees_pricing` tinyint(4) NOT NULL,
   PRIMARY KEY (`id_pricing`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
 
 -- Listage des données de la table landing_page_brice.pricing : ~3 rows (environ)
 /*!40000 ALTER TABLE `pricing` DISABLE KEYS */;
