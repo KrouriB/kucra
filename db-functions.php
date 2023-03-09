@@ -32,13 +32,13 @@ function selectAllPricing(){
 
 
 
-function updateFunction($name,$price,$sale,$bandwidth,$onlinespace,$support,$domain,$hidden_fees){
+function updateFunction($name,$price,$sale,$bandwidth,$onlinespace,$support,$domain,$hidden_fees,$id){
     $query =   'UPDATE pricing
                 SET nom_pricing = :name,
                     prix_pricing = :price,
                     pourcentage_reduction_pricing = :sale,
                     bandwidth_pricing = :bandwidth,
-                    onlinespace_pricing = :onlinespace:,
+                    onlinespace_pricing = :onlinespace,
                     support_pricing = :support,
                     domain_pricing = :domain,
                     hidden_fees_pricing = :hidden_fees
@@ -52,8 +52,8 @@ function updateFunction($name,$price,$sale,$bandwidth,$onlinespace,$support,$dom
         "onlinespace" => $onlinespace,
         "support" => $support,
         "domain" => $domain,
-        "hidden_fees" => $name,
-        "id" => $_GET['id'],
+        "hidden_fees" => $hidden_fees,
+        "id" => $id,
     ]);
 }
 
