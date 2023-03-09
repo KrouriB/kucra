@@ -28,10 +28,6 @@ function selectAllPricing(){
     return $query;
 }
 
-
-
-
-
 function updateFunction($name,$price,$sale,$bandwidth,$onlinespace,$support,$domain,$hidden_fees,$id){
     $query =   'UPDATE pricing
                 SET nom_pricing = :name,
@@ -57,5 +53,21 @@ function updateFunction($name,$price,$sale,$bandwidth,$onlinespace,$support,$dom
     ]);
 }
 
+function addCompte($id){
+    $query =   'UPDATE pricing
+                SET compte_pricing = compte_pricing + 1
+                WHERE id_pricing = :id';
+    $elementStatement = connexion()->prepare($query);
+    $elementStatement->execute(["id" => $id]);
+}
+
+function getMessages(){
+    if(isset( $_SESSION["message"])&& !empty( $_SESSION["message"])){
+        $html = "<div id='message'><p>". $_SESSION["message"]."</p></div>";
+        unset( $_SESSION["message"]);
+        return $html;
+    }
+    return false;
+}
 
 ?>
