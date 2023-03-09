@@ -276,27 +276,46 @@ require_once('db-functions.php');
 		foreach ($pricings as $pricing) {
 			$sup_circle = ($pricing['support_pricing']) ? 'xmark' : 'check';
 			$h_f_circle = ($pricing['hidden_fees_pricing']) ? 'xmark' : 'check';
-			$display = '';
-			$display .= '<div class="carteprix" id="pack' . $pricing['id_pricing'] . '">';
-			if ($pricing['pourcentage_reduction_pricing'] != 0) {
-				$display .= '<p class="reduc">' . $pricing['pourcentage_reduction_pricing'] . '% Sale</p>';
-			}
-			$display .= '<div class="interieureCarte"><h3>' . $pricing['nom_pricing'] . '</h3>';
-			$display .= '<div class="prixmois"><p class="currency">$</p><p class="prix">' . round($pricing['prix_pricing']) . '</p><p class="parmois">/mouth</p></div>';
-			$display .= '<div class="infolignes"><div class="typeinfo">';
-			$display .= '<p><i class="fa-regular fa-circle-check"></i>Bandwidth</p>';
-			$display .= '<p><i class="fa-regular fa-circle-check"></i>Onlinespace</p>';
-			$display .= '<p><i class="fa-regular fa-circle-' . $sup_circle . '"></i>Support</p>';
-			$display .= '<p><i class="fa-regular fa-circle-check"></i>Domain</p>';
-			$display .= '<p><i class="fa-regular fa-circle-' . $h_f_circle . '"></i>Hidden Fees</p>';
-			$display .= '</div><div class="valueinfo">';
-			$display .= '<p>' . $pricing['bandwidth_pricing'] . 'GB</p>';
-			$display .= ($pricing['onlinespace_pricing'] > 999) ? '<p>' . ($pricing['onlinespace_pricing'] / 1000) . 'GB</p>' : '<p>' . $pricing['onlinespace_pricing'] . 'MB</p>';
-			$display .= ($pricing['support_pricing']) ? '<p>No</p>' : '<p>Yes</p>';
-			$display .= ($pricing['domain_pricing'] < 0) ? '<p>Unlimited</p>' : '<p>' . $pricing['domain_pricing'] . '</p>';
-			$display .= ($pricing['hidden_fees_pricing']) ? '<p>No</p>' : '<p>Yes</p>';
-			$display .= '</div></div><a href="#">Join Now</a></div></div>';
-			echo $display;
+			?>
+			<div class="carteprix" id="pack<?=$pricing['id_pricing']?>">
+				<?php
+				if ($pricing['pourcentage_reduction_pricing'] != 0) {
+					echo '<p class="reduc">' . $pricing['pourcentage_reduction_pricing'] . '% Sale</p>';
+				}
+				?>
+				<div class="interieureCarte"><h3><?=$pricing['nom_pricing']?></h3>
+				<div class="prixmois">
+					<span class="currency">$</span>
+					<span class="prix"><?=round($pricing['prix_pricing'])?></span>
+					<span class="parmois">/mouth</span>
+				</div>
+				<div class="infolignes"><div class="typeinfo">
+					<span><i class="fa-regular fa-circle-check"></i>Bandwidth</span>
+					<span><i class="fa-regular fa-circle-check"></i>Onlinespace</span>
+					<span><i class="fa-regular fa-circle-<?=$sup_circle?>"></i>Support</span>
+					<span><i class="fa-regular fa-circle-check"></i>Domain</span>
+					<span><i class="fa-regular fa-circle-<?=$h_f_circle?>"></i>Hidden Fees</span>
+				</div>
+				<div class="valueinfo">
+					<span><?=$pricing['bandwidth_pricing']?>GB</span>
+					<?php
+						($pricing['onlinespace_pricing'] > 999) ?
+						'<span>' . ($pricing['onlinespace_pricing'] / 1000) . 'GB</span>' :
+						'<span>' . $pricing['onlinespace_pricing'] . 'MB</span>';
+						($pricing['support_pricing']) ?
+						'<span>No</span>' :
+						'<span>Yes</span>';
+						($pricing['domain_pricing'] < 0) ?
+						'<span>Unlimited</span>' :
+						'<span>' . $pricing['domain_pricing'] .'</span>';
+						($pricing['hidden_fees_pricing']) ?
+						'<span>No</span>' :
+						'<span>Yes</span>';
+					?>
+				</div>
+			</div>
+			<a href="traitemant.php?action=add&id=<?= $pricing['id_pricing'] ?>">Join Now</a></div></div>';
+		<?php 
 		}
 		?>
 	</div>
@@ -409,7 +428,7 @@ require_once('db-functions.php');
 	<div id="claire" class="btnColor" data-theme="base">Thème Claire</div>
 	<div id="sombre" class="btnColor" data-theme="dark">Thème Sombre</div>
 </div>
-
+<?= getMessages() ?>
 <script src="script.js"></script>
 
 <?php
