@@ -30,6 +30,15 @@ if(isset($_GET['action'])){
                 header("Location:index.php#n7");
                 die();
             }
+            break;
+        case "subscribe":
+            var_dump('test',$email);
+            die();
+            if(isset($_POST['submit'])){
+                $email = filter_input(INPUT_POST,$_POST['email'],FILTER_VALIDATE_EMAIL);
+                ajoutEmail($email);
+            }
+            break;
     }
 }
 header("Location:index.php");
