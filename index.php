@@ -427,18 +427,24 @@ require_once('db-functions.php');
 	</p>
 </footer>
 <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fa-solid fa-arrow-up"></i></button>
+
 <!-- marche aussi avec un <a href="#n1"><i class="fa-solid fa-arrow-up"></i></a> -->
+
 <button onclick="colorSettings()" id="colorswap"><i class="fa-solid fa-gear"></i></button>
+<button onclick="colorChange()" id="colorChange" data-theme="dark"><i class="fa-solid fa-gear"></i></button>
+
 <div id="themeBox" class="cacher">
 	<div id="claire" class="btnColor" data-theme="base">Thème Claire</div>
 	<div id="sombre" class="btnColor" data-theme="dark">Thème Sombre</div>
 </div>
+
+
 <?= getMessages() ?>
 <script src="script.js"></script>
 
 <?php
 $content = ob_get_clean();
-$titre = "Kukra";
+$titre = "Kucra";
 require "template.php";
 ?>
 
