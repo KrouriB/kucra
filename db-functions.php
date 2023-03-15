@@ -1,34 +1,39 @@
 <?php
 
-function connexion(){
+function connexion()
+{
     try {
-        $mysqlClient = new PDO('mysql:host=localhost;dbname=landing_page_brice;charset=utf8','root',null, [PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION]);
+        $mysqlClient = new PDO('mysql:host=localhost;dbname=landing_page_brice;charset=utf8', 'root', null, [PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION]);
         return $mysqlClient;
     } catch (Exception $e) {
         die('Erreur : ' . $e->getMessage());
     }
 }
 
-function find($query){
+function find($query)
+{
     $elementStatement = connexion()->prepare($query);
     $elementStatement->execute();
     $element = $elementStatement->fetch();
     return $element;
 }
 
-function findAll($query){
+function findAll($query)
+{
     $tableauStatement = connexion()->prepare($query);
     $tableauStatement->execute();
     $tableau = $tableauStatement->fetchAll();
     return $tableau;
 }
 
-function selectAllPricing(){
+function selectAllPricing()
+{
     $query = 'SELECT * FROM pricing';
     return $query;
 }
 
-function updateFunction($name,$price,$sale,$bandwidth,$onlinespace,$support,$domain,$hidden_fees,$id){
+function updateFunction($name, $price, $sale, $bandwidth, $onlinespace, $support, $domain, $hidden_fees, $id)
+{
     $query =   'UPDATE pricing
                 SET nom_pricing = :name,
                     prix_pricing = :price,
@@ -53,7 +58,8 @@ function updateFunction($name,$price,$sale,$bandwidth,$onlinespace,$support,$dom
     ]);
 }
 
-function addCompte($id){
+function addCompte($id)
+{
     $query =   'UPDATE pricing
                 SET compte_pricing = compte_pricing + 1
                 WHERE id_pricing = :id';
@@ -61,7 +67,8 @@ function addCompte($id){
     $elementStatement->execute(["id" => $id]);
 }
 
-function viderCompte($id){
+function viderCompte($id)
+{
     $query =   'UPDATE pricing
                 SET compte_pricing = 0
                 WHERE id_pricing = :id';
@@ -70,17 +77,26 @@ function viderCompte($id){
 }
 
 
-function ajoutEmail($unEmail){
+function ajoutEmail($unEmail)
+{
     $query =   'INSERT INTO email (adresse_email)
                 VALUES (:unEmail)';
     $elementStatement = connexion()->prepare($query);
     $elementStatement->execute(["unEmail" => $unEmail]);
 }
 
-function getMessages(){
-    if(isset( $_SESSION["message"])&& !empty( $_SESSION["message"])){
-        $html = "<div id='message'><p>". $_SESSION["message"]."</p></div>";
-        unset( $_SESSION["message"]);
+function viderBDDemail()
+{
+    $query = 'TRUNCATE TABLE email';
+    $elementStatement = connexion()->prepare($query);
+    $elementStatement->execute();
+}
+
+function getMessages()
+{
+    if (isset($_SESSION["message"]) && !empty($_SESSION["message"])) {
+        $html = "<div id='message'><p>" . $_SESSION["message"] . "</p></div>";
+        unset($_SESSION["message"]);
         return $html;
     }
     return false;
