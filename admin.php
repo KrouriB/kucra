@@ -60,6 +60,7 @@ require_once('db-functions.php');
                     <input type="submit" class="submitBtn" name="submit<?=$pricing['id_pricing']?>" value="Update">
                 </form>
                 <span>Nombre de commande : <?=$pricing['compte_pricing']?></span>
+                <a href="traitemant.php?action=deleteCompte&id=<?=$pricing['id_pricing']?>" class="viderCompte">Vider</a>
             </div>
         <?php
         }
