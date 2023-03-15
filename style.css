@@ -1215,7 +1215,27 @@ footer>ul li:last-child {
 	display: none;
 }
 
+#colorChange{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: fixed;
+	top: 20vh;
+	left: 0;
+	border: none;
+	background-color: var(--secondary);
+	color: var(--btjs);
+	cursor: pointer;
+	width: 60px;
+	height: 60px;
+	z-index: 5;
+}
 
+
+
+#colorChange>.fa-solid {
+	font-size: 30px;
+}
 
 
 
