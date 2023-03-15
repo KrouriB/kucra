@@ -1291,10 +1291,20 @@ footer>ul li:last-child {
 }
 
 .viderCompte{
-	margin-top: 20px;
+	margin: 20px 0;
 	text-decoration: none;
 	background-color: var(--button);
 	color: white;
+	border-radius: 10px;
+	text-align: center;
+}
+
+#videzEmail{
+	margin: 20px 0;
+	padding: 10px 20px;
+	text-decoration: none;
+	background-color: black;
+	color: red;
 	border-radius: 10px;
 	text-align: center;
 }

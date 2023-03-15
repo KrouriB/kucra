@@ -458,4 +458,5 @@ require "template.php";
     horloge <i class="fa-regular fa-clock"></i>
     flèche cers le haut <i class="fa-solid fa-arrow-up"></i>
 	rouage <i class="fa-solid fa-gear"></i></i>
+	poubelle <i class="fa-solid fa-trash"></i>
  -->
