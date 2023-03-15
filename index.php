@@ -40,8 +40,8 @@ require_once('db-functions.php');
 				balance between purpose & presentation
 			</p>
 			<form action="traitemant.php?action=subscribe" method="post" id="infomail">
-				<input type="email" placeholder="Entrez votre email" id="mail">
-				<input type="submit" value="SUBSCRIBE" id="button">
+				<input type="email" placeholder="Entrez votre email" name="email" id="mail">
+				<input type="submit" value="SUBSCRIBE" name="emailSubmit" id="button">
 			</form>
 		</article>
 		<figure id="fimgsect1">
@@ -276,46 +276,51 @@ require_once('db-functions.php');
 		foreach ($pricings as $pricing) {
 			$sup_circle = ($pricing['support_pricing']) ? 'xmark' : 'check';
 			$h_f_circle = ($pricing['hidden_fees_pricing']) ? 'xmark' : 'check';
-			?>
-			<div class="carteprix" id="pack<?=$pricing['id_pricing']?>">
+		?>
+			<div class="carteprix" id="pack<?= $pricing['id_pricing'] ?>">
 				<?php
 				if ($pricing['pourcentage_reduction_pricing'] != 0) {
 					echo '<p class="reduc">' . $pricing['pourcentage_reduction_pricing'] . '% Sale</p>';
 				}
 				?>
-				<div class="interieureCarte"><h3><?=$pricing['nom_pricing']?></h3>
-				<div class="prixmois">
-					<span class="currency">$</span>
-					<span class="prix"><?=round($pricing['prix_pricing'])?></span>
-					<span class="parmois">/mouth</span>
-				</div>
-				<div class="infolignes"><div class="typeinfo">
-					<span><i class="fa-regular fa-circle-check"></i>Bandwidth</span>
-					<span><i class="fa-regular fa-circle-check"></i>Onlinespace</span>
-					<span><i class="fa-regular fa-circle-<?=$sup_circle?>"></i>Support</span>
-					<span><i class="fa-regular fa-circle-check"></i>Domain</span>
-					<span><i class="fa-regular fa-circle-<?=$h_f_circle?>"></i>Hidden Fees</span>
-				</div>
-				<div class="valueinfo">
-					<span><?=$pricing['bandwidth_pricing']?>GB</span>
-					<?php
-						($pricing['onlinespace_pricing'] > 999) ?
-						'<span>' . ($pricing['onlinespace_pricing'] / 1000) . 'GB</span>' :
-						'<span>' . $pricing['onlinespace_pricing'] . 'MB</span>';
-						($pricing['support_pricing']) ?
-						'<span>No</span>' :
-						'<span>Yes</span>';
-						($pricing['domain_pricing'] < 0) ?
-						'<span>Unlimited</span>' :
-						'<span>' . $pricing['domain_pricing'] .'</span>';
-						($pricing['hidden_fees_pricing']) ?
-						'<span>No</span>' :
-						'<span>Yes</span>';
-					?>
+				<div class="interieureCarte">
+					<h3><?= $pricing['nom_pricing'] ?></h3>
+					<div class="prixmois">
+						<span class="currency">$</span>
+						<span class="prix"><?= round($pricing['prix_pricing']) ?></span>
+						<span class="parmois">/mouth</span>
+					</div>
+					<div class="infolignes">
+						<div class="typeinfo">
+							<span><i class="fa-regular fa-circle-check"></i>Bandwidth</span>
+							<span><i class="fa-regular fa-circle-check"></i>Onlinespace</span>
+							<span><i class="fa-regular fa-circle-<?= $sup_circle ?>"></i>Support</span>
+							<span><i class="fa-regular fa-circle-check"></i>Domain</span>
+							<span><i class="fa-regular fa-circle-<?= $h_f_circle ?>"></i>Hidden Fees</span>
+						</div>
+						<div class="valueinfo">
+							<span><?= $pricing['bandwidth_pricing'] ?>GB</span>
+							<?php
+							echo ($pricing['onlinespace_pricing'] > 999) ? '<span>' . ($pricing['onlinespace_pricing'] / 1000) . 'GB</span>' : '<span>' . $pricing['onlinespace_pricing'] . 'MB</span>';
+
+							echo ($pricing['support_pricing']) ?
+								'<span>No</span>' :
+								'<span>Yes</span>';
+
+							echo ($pricing['domain_pricing'] < 0) ?
+								'<span>Unlimited</span>' :
+								'<span>' . $pricing['domain_pricing'] . '</span>';
+
+							echo ($pricing['hidden_fees_pricing']) ?
+								'<span>No</span>' :
+								'<span>Yes</span>';
+							?>
+						</div>
+					</div>
+					<a href="traitemant.php?action=add&id=<?= $pricing['id_pricing'] ?>">Join Now</a>
 				</div>
 			</div>
-			<a href="traitemant.php?action=add&id=<?= $pricing['id_pricing'] ?>">Join Now</a></div></div>';
-		<?php 
+		<?php
 		}
 		?>
 	</div>
@@ -432,9 +437,9 @@ require_once('db-functions.php');
 <script src="script.js"></script>
 
 <?php
-    $content = ob_get_clean();
-    $titre="Kukra";
-    require "template.php";
+$content = ob_get_clean();
+$titre = "Kukra";
+require "template.php";
 ?>
 
 <!--
