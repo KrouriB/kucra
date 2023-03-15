@@ -91,5 +91,21 @@ function colorChange(){
 	}
 }
 
+// suppression du message d'information
+
+var messageBox = document.getElementById("message");
+if(messageBox){
+	setTimeout(() => {
+		messageBox.classList.add('disparition');
+		},
+		3000
+	);
+	setTimeout(() => {
+		messageBox.style.display = 'none';
+		},
+		4000
+	);
+}
+
 
 
