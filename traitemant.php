@@ -35,6 +35,7 @@ if (isset($_GET['action'])) {
             if (isset($_POST['emailSubmit'])) {
                 $email = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_EMAIL);
                 ajoutEmail($email);
+                $_SESSION['message'] = "Votre email " . $email . " a bien été ajouté";
             }
             break;
         case "deleteCompte":
@@ -44,7 +45,10 @@ if (isset($_GET['action'])) {
                 header("Location:admin.php");
                 die;
             }
-        
+            break;
+        case "viderEmail":
+            viderBDDemail();
+            break;
     }
 }
 header("Location:index.php");

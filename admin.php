@@ -66,7 +66,7 @@ require_once('db-functions.php');
         }
         ?>
     </div>
-    <a href="traitemant.php?action=videzEmail" id="videzEmail"><i class="fa-solid fa-trash"></i></a>
+    <a href="traitemant.php?action=viderEmail" id="videzEmail"><i class="fa-solid fa-trash"></i></a>
     <a href="index.php" id="retourAdmin">Retour</a>
 </section>
 
