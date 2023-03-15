@@ -18,6 +18,8 @@ for(let i = 0 ; i < liHeader.length ;i++){
 	})
 }
 
+//  création de différent theme de couleur
+
 const themes = {
 	base: {
 		"--primary": "#1294b8",
@@ -39,9 +41,13 @@ const themes = {
 	},
 };
 
-let colorswap = document.getElementById("colorswap");
+let colorswap = document.getElementById("colorChange");
 const corps = document.body
+
+
 let settingbox = document.getElementById("themeBox");
+
+// fonction pour afficher la boite de selection de theme
 
 function colorSettings() {
 	corps.style.overflow = "hidden";
@@ -55,9 +61,9 @@ console.log(buttons);
 for (const button of buttons) {
 	button.addEventListener('click', () => {
 		console.log(button);
-        const theme = themes[button.dataset.theme];
-        for (var variable in theme) {
-            document.documentElement.style.setProperty(variable, theme[variable]);
+        const currentTheme = themes[button.dataset.theme];
+        for (var variable in currentTheme) {
+            document.documentElement.style.setProperty(variable, currentTheme[variable]);
 			settingbox.classList.remove("parabox");
 			settingbox.classList.add("cacher");
 			corps.style.overflow = "";
@@ -65,3 +71,25 @@ for (const button of buttons) {
         };
     });
 }
+
+function colorChange(){
+	const theme = themes[colorswap.dataset.theme];
+	const currentTheme = document.getElementById("colorChange").dataset.theme;
+	console.log(currentTheme)
+	if(currentTheme == "dark"){
+		for (var variable in theme) {
+            document.documentElement.style.setProperty(variable, theme[variable]);
+        };
+		colorswap.dataset.theme = "base";
+		colorswap.setAttribute("data-theme", "base");
+	}else{
+		for (var variable in theme) {
+            document.documentElement.style.setProperty(variable, theme[variable]);
+        };
+		colorswap.dataset.theme = "dark";
+		colorswap.setAttribute("data-theme","dark");
+	}
+}
+
+
+
