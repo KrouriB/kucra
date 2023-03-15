@@ -61,11 +61,20 @@ function addCompte($id){
     $elementStatement->execute(["id" => $id]);
 }
 
-function ajoutEmail($email){
-    $query =   'INSERT INTO email (adresse_email)
-                VALUES (:email)';
+function viderCompte($id){
+    $query =   'UPDATE pricing
+                SET compte_pricing = 0
+                WHERE id_pricing = :id';
     $elementStatement = connexion()->prepare($query);
-    $elementStatement->execute(["email" => $email]);
+    $elementStatement->execute(["id" => $id]);
+}
+
+
+function ajoutEmail($unEmail){
+    $query =   'INSERT INTO email (adresse_email)
+                VALUES (:unEmail)';
+    $elementStatement = connexion()->prepare($query);
+    $elementStatement->execute(["unEmail" => $unEmail]);
 }
 
 function getMessages(){
@@ -76,5 +85,3 @@ function getMessages(){
     }
     return false;
 }
-
-?>
