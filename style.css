@@ -1095,6 +1095,11 @@ footer>ul li:last-child {
 	border: var(--ombre) 3px solid;
 	border-radius: 12px;
 	font-size: xx-large;
+	transition: 1s;
+}
+
+.disparition{
+	filter: opacity(0);
 }
 
 
