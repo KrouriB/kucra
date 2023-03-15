@@ -266,6 +266,19 @@ form {
 
 /* partie droite */
 
+@media (min-height: 1080px) and (max-width: 1080px){
+	header{
+		flex-direction: column;
+	}
+
+	#ulNav{
+		flex-direction: column;
+	}
+
+	#fimgsect1{
+		display: none;
+	}
+}
 
 #imgsect1 {
 	height: 70vh;
@@ -1016,6 +1029,9 @@ footer {
 #iconeContactFooter {
 	display: flex;
 	flex-direction: row;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
 	gap: 40px;
 }
 
@@ -1104,7 +1120,7 @@ footer>ul li:last-child {
 	align-items: center;
 	position: fixed;
 	bottom: 3vh;
-	right: 3vw;
+	left: 75vw;
 	border: none;
 	background-color: var(--btjs);
 	color: var(--secondary);
@@ -1141,7 +1157,7 @@ footer>ul li:last-child {
 	align-items: center;
 	position: fixed;
 	top: 10vh;
-	right: 0;
+	left: 0;
 	border: none;
 	background-color: var(--btjs);
 	color: var(--secondary);
@@ -1272,4 +1288,13 @@ footer>ul li:last-child {
 .submitBtn{
 	height: 5%;
 	width: 70%;
+}
+
+.viderCompte{
+	margin-top: 20px;
+	text-decoration: none;
+	background-color: var(--button);
+	color: white;
+	border-radius: 10px;
+	text-align: center;
 }
