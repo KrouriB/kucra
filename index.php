@@ -280,7 +280,7 @@ require_once('db-functions.php');
 			<div class="carteprix" id="pack<?= $pricing['id_pricing'] ?>">
 				<?php
 				if ($pricing['pourcentage_reduction_pricing'] != 0) {
-					echo '<p class="reduc">' . $pricing['pourcentage_reduction_pricing'] . '% Sale</p>';
+					echo '<p class="reduc">' . $pricing['pourcentage_reduction_pricing'] . '%<br> Sale</p>';
 				}
 				?>
 				<div class="interieureCarte">
