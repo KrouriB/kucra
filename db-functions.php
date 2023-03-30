@@ -54,7 +54,7 @@ function updateFunction($name, $price, $sale, $bandwidth, $onlinespace, $support
         "support" => $support,
         "domain" => $domain,
         "hidden_fees" => $hidden_fees,
-        "id" => $id,
+        "id" => $id
     ]);
 }
 
